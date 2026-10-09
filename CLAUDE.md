@@ -26,7 +26,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 | Setting | Effect while empty |
 |---|---|
-| `auditFormUrl` | Every "Get a free audit" button opens an email to the contact address instead |
+| `auditFormUrl` | Set to the Jotform "CatalogFix Audit Form" (form 262799242505060), which follows brief §8. If emptied, every "Get a free audit" button opens an email instead |
 | `whatsappNumber` (digits + country code) | QR box and mobile link show a "coming soon" note. When set, the QR code is generated automatically |
 | `emailRot13` | ROT13 of the contact email (currently admin@catalogfix.com). Never put the plain address in HTML or meta tags |
 

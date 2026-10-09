@@ -1,8 +1,8 @@
 /* CatalogFix v2 — shared behaviour for all pages.
    Fill in CONFIG when the free-audit Google Form and the WhatsApp number are ready. */
 var CONFIG = {
-  // Free-audit Google Form. While empty, "Get a free audit" opens an email instead.
-  auditFormUrl: '',
+  // Free-audit form (Jotform: "CatalogFix Audit Form"). While empty, "Get a free audit" opens an email instead.
+  auditFormUrl: 'https://form.jotform.com/262799242505060',
 
   // WhatsApp number: digits only, with country code (e.g. '639171234567').
   // While empty, the QR code and the mobile link show a "coming soon" note.
