@@ -32,8 +32,19 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 ## Placeholders still on the pages (brief §9 open items)
 
-- **Client logos** — names shown as text in the "Brands we work with" strip (Home and Who We Are). Swap each `<li>` text for an `<img>`.
-- **Reviews** — two blocks marked PLACEHOLDER on Home. Carl supplies quote, name, role, brand logo. Never write review text.
+- **Reviews** — three real, client-approved quotes on Home: Jens Vogel (Wildfang, the full-width lead), Joe Woody (Wickers), Max N. (Amazon International Manager, Warrior; from his LinkedIn recommendation). Keep them **word for word** — never edit, trim or write review text without the client's OK. Roles for Jens and Joe are still missing. Logos live in `docs/assets/clients/` (trimmed from Carl's "Client logo" folder; Duke and Livingood logos are deliberately not in the repo because they aren't shown).
+
+## "Who we work with" (Home and Who We Are)
+
+Carl's decision (Oct 2026): **no client names or logos** in this list, so it needs no brand approval. Each client is described by category · marketplaces · service. Only the reviews name a client (Wildfang, Wickers, Warrior). Keep both pages' lists identical.
+
+| Client (internal only) | On the site |
+|---|---|
+| 001 Wildfang Pet | Pet brand · Amazon US, CA, UK, EU, AU, JP · Walmart · eBay · Full account management |
+| 005 Duke Defense | Personal defense brand · Amazon US · Full account management |
+| 004 Livingood Daily | Supplement brand · Amazon US · Walmart US · Catalog & SEO, listing fixes |
+| 002 Wickers Sports | Sports apparel brand · Amazon US · Advertising |
+| 003 Warrior (formerly KBF Enterprises) | Supplement brand · Amazon EU · Advertising |
 - **Team** — only Carl is listed. Add each person only after they've agreed to be listed (brief §7). Copy a placeholder `<li>`, remove `is-placeholder`.
 - **"Many of us came from agencies"** — Who We Are uses the safe fallback "Our founder came from agencies." until Carl confirms (HTML comment marks the spot).
 - **Extra services** (account health & appeals, Brand Registry, category ungating, Vine) — left off "What we do" until Carl decides.
