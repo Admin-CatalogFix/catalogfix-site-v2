@@ -237,58 +237,29 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 @media (max-width: 999px) { .clients-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 599px) { .clients-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; } }
 
-/* ── How we work ────────────────────────────── */
-.how-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(40px, 7vw, 112px);
-  align-items: start;
-}
-.how-intro p { max-width: 460px; }
-.steps { position: relative; counter-reset: step; }
-/* Thin orange line ending in an arrow — the logo's arrow, drawn as a line */
-.steps::before {
-  content: "";
-  position: absolute;
-  left: 19px;
-  top: 40px;
-  bottom: 10px;
-  width: 1.5px;
-  background: var(--orange);
-}
-.steps::after {
-  content: "";
-  position: absolute;
-  left: 14px;
-  bottom: 9px;
-  width: 12px;
-  height: 12px;
-  border-right: 1.5px solid var(--orange);
-  border-bottom: 1.5px solid var(--orange);
-  transform: rotate(45deg);
-}
-.step { position: relative; padding: 0 0 48px 76px; counter-increment: step; }
-.step::before {
-  content: counter(step, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border: 1.5px solid var(--orange);
-  border-radius: 50%;
-  background: var(--soft);
-  color: var(--navy);
-  font-size: 13px;
+/* ── The process (three steps) ──────────────── */
+.process-head { max-width: 640px; margin-bottom: clamp(44px, 6vw, 72px); }
+.process { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 5vw, 64px); }
+.process-num {
+  display: block;
+  margin-bottom: 18px;
+  font-size: clamp(52px, 6vw, 68px);
   font-weight: 700;
-  letter-spacing: 0;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(232, 129, 48, 0.45);   /* decorative, like the faint numbers on the live site */
 }
-.step h3 { font-size: 24px; margin: 7px 0 8px; }
-.step p { max-width: 460px; }
+.process h3 { font-size: 21px; letter-spacing: -0.01em; margin-bottom: 10px; }
+.process p { font-size: 16px; line-height: 1.7; }
+.process-note {
+  max-width: 720px;
+  margin-top: clamp(44px, 5vw, 64px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+}
 
-@media (max-width: 860px) { .how-grid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .process { grid-template-columns: 1fr; gap: 36px; } }
 
 /* ── Comparison table ───────────────────────── */
 .cmp-head { max-width: 640px; margin-bottom: 40px; }

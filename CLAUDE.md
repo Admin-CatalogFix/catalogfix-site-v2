@@ -54,7 +54,9 @@ Carl's decision (Oct 2026): **no client names or logos** in this list, so it nee
 - Light design only. Brand colours only (see brief §2). `#DDE3EA` is for lines/borders, never text. No gradients, shadows, patterns, emoji icons, green checkmarks.
 - Font: Helvetica Neue stack. The logo's typeface is only in the logo image.
 - Banned words: stewardship, compounding, world-class, game-changing, cutting-edge.
-- Never say "no account manager" or "weekly" reports (say "regular"). Don't lead with "not an agency". Don't centre on Slack.
+- Never say "no account manager" or "weekly" reports (say "regular"). Don't centre on Slack.
+- Carl's wording (Oct 2026): **"Not your typical agency"** replaces "not an agency". Use it only as a contrast (it heads the comparison section, with "A typical agency runs on a churn-driven model. We're built for the long term."), never as the intro.
+- Home "The process" is the live site's three steps (Reach Out / We Assess / We Get to Work), not the brief's four. Two phrases from the live copy were left out on purpose: "not through an account manager" (breaks the rule above) and "no contact form purgatory" (contradicts the free-audit form).
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 
 ## Before moving catalogfix.com to this site (only when Carl approves)
