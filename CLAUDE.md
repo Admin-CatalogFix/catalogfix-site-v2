@@ -55,8 +55,10 @@ Carl's decision (Oct 2026): **no client names or logos** in this list, so it nee
 - Font: Helvetica Neue stack. The logo's typeface is only in the logo image.
 - Banned words: stewardship, compounding, world-class, game-changing, cutting-edge.
 - Never say "no account manager" or "weekly" reports (say "regular"). Don't centre on Slack.
-- Carl's wording (Oct 2026): **"Not your typical agency"** replaces "not an agency". Use it only as a contrast (it heads the comparison section, with "A typical agency runs on a churn-driven model. We're built for the long term."), never as the intro.
-- Home "The process" is the live site's three steps (Reach Out / We Assess / We Get to Work), not the brief's four. Two phrases from the live copy were left out on purpose: "not through an account manager" (breaks the rule above) and "no contact form purgatory" (contradicts the free-audit form).
+- Carl's wording (Oct 2026): **"Not your typical agency"** replaces "not an agency". Use it only as a contrast, never as the intro. It's the eyebrow of the comparison section, whose headline is "CatalogFix is **built for the long term.**" (highlight in Deep Orange via `.hl`) and lead "A typical agency runs on a churn-driven model."
+- Home "How we work" (approved by Carl, Oct 2026): heading "Simple from the start.", three steps **Audit / Work / Report** (the brief's steps minus "Match"), joined by a thin orange arrow line. It merges the brief with the live site's tone — don't swap in the live site's "Reach Out / We Assess / We Get to Work" copy.
+- Comparison table column order: CatalogFix, Agency, Direct hire, Freelancer. Each row has a one-line description (`.cmp-desc`). Fee row wording is deliberate: Carl may renegotiate fees after big results, so never promise fees won't rise — the point is they aren't tied to sales and any change is agreed first.
+- **Process: propose copy and layout to Carl and get his OK before building or pushing changes.**
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 
 ## Before moving catalogfix.com to this site (only when Carl approves)

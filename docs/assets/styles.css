@@ -239,30 +239,68 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 
 /* ── The process (three steps) ──────────────── */
 .process-head { max-width: 640px; margin-bottom: clamp(44px, 6vw, 72px); }
-.process { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(32px, 5vw, 64px); }
+.process {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 64px);
+}
+/* Thin orange line through the step circles, ending in an arrow (the logo's arrow, drawn as a line).
+   The circles share the section background, so the line looks like it passes behind them. */
+.process::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 24px;
+  right: 4px;
+  height: 1.5px;
+  background: var(--orange);
+}
+.process::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 3px;
+  width: 11px;
+  height: 11px;
+  border-top: 1.5px solid var(--orange);
+  border-right: 1.5px solid var(--orange);
+  transform: rotate(45deg);
+}
+.process li { position: relative; }
 .process-num {
-  display: block;
-  margin-bottom: 18px;
-  font-size: clamp(52px, 6vw, 68px);
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border: 1.5px solid var(--orange);
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--navy);
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  color: rgba(232, 129, 48, 0.45);   /* decorative, like the faint numbers on the live site */
 }
-.process h3 { font-size: 21px; letter-spacing: -0.01em; margin-bottom: 10px; }
-.process p { font-size: 16px; line-height: 1.7; }
-.process-note {
-  max-width: 720px;
-  margin-top: clamp(44px, 5vw, 64px);
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  font-size: 16px;
-}
+.process h3 { font-size: 24px; letter-spacing: -0.01em; margin-bottom: 10px; }
+.process p { font-size: 16px; line-height: 1.7; max-width: 340px; }
 
-@media (max-width: 760px) { .process { grid-template-columns: 1fr; gap: 36px; } }
+/* Phones: steps stack and the line runs down the left, arrow pointing down */
+@media (max-width: 760px) {
+  .process { grid-template-columns: 1fr; gap: 0; }
+  .process::before { top: 48px; bottom: 12px; left: 23px; right: auto; width: 1.5px; height: auto; }
+  .process::after { top: auto; bottom: 11px; left: 18px; right: auto; transform: rotate(135deg); }
+  .process li { padding: 0 0 40px 72px; }
+  .process-num { position: absolute; left: 0; top: 0; margin: 0; }
+  .process h3 { padding-top: 10px; }
+}
 
 /* ── Comparison table ───────────────────────── */
-.cmp-head { max-width: 640px; margin-bottom: 40px; }
+.cmp-head { max-width: 760px; margin-bottom: 40px; }
+/* Deep Orange, not Primary Orange: the lighter orange is too faint to read as text on white */
+.hl { color: var(--orange-d); }
+.cmp-desc { display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.45; color: var(--muted); }
 .cmp-scroll {
   position: relative;   /* contains the absolutely-positioned .sr-only labels so they can't widen the page */
   overflow-x: auto;
@@ -312,7 +350,8 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   .cmp-hint { display: block; }
   .cmp { min-width: 540px; font-size: 15px; }
   .cmp th, .cmp td { padding: 14px 12px; }
-  .cmp th:first-child { width: auto; min-width: 0; max-width: 150px; }
+  .cmp th:first-child { width: auto; min-width: 0; max-width: 170px; }
+  .cmp-desc { font-size: 13px; }
   .cmp thead th { font-size: 14px; }
 }
 
@@ -342,7 +381,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   border-left: 0;
   border-bottom: 1px solid var(--line);
 }
-.review--lead blockquote p { font-size: clamp(21px, 2.2vw, 27px); line-height: 1.42; letter-spacing: -0.01em; }
+.review--lead blockquote p { font-size: clamp(19px, 1.9vw, 22px); line-height: 1.45; letter-spacing: -0.01em; }
 .placeholder-tag {
   display: inline-block;
   margin-bottom: 14px;
