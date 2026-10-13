@@ -70,6 +70,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 }
 .h2 { font-size: clamp(32px, 4.4vw, 52px); margin-bottom: 22px; }
 .lead { font-size: clamp(18px, 1.7vw, 21px); line-height: 1.55; max-width: 560px; }
+.line { display: block; }   /* one sentence per line, for short multi-sentence leads */
 
 /* ── Buttons & links ────────────────────────── */
 .btn {
@@ -229,6 +230,15 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   width: 28px;
   height: 2px;
   background: var(--orange);
+}
+.client-logo {
+  align-self: flex-start;
+  height: 56px;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 14px;
+  object-fit: contain;
+  object-position: left center;
 }
 .client-cat { font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--navy); }
 .client-mkt { font-size: 14px; line-height: 1.45; color: var(--muted); }

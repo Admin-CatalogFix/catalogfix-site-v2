@@ -32,11 +32,11 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 ## Placeholders still on the pages (brief §9 open items)
 
-- **Reviews** — three real, client-approved quotes on Home: Jens Vogel (Wildfang, the full-width lead), Joe Woody (Wickers), Max N. (Amazon International Manager, Warrior; from his LinkedIn recommendation). Keep them **word for word** — never edit, trim or write review text without the client's OK. Roles for Jens and Joe are still missing. Logos live in `docs/assets/clients/` (trimmed from Carl's "Client logo" folder; Duke and Livingood logos are deliberately not in the repo because they aren't shown).
+- **Reviews** — three real, client-approved quotes on Home: Jens Vogel (Wildfang, the full-width lead), Joe Woody (Wickers), Max N. (Amazon International Manager, Warrior; from his LinkedIn recommendation). Roles: Jens = Managing Director, Joe = Owner. Keep quotes **word for word** — never edit, trim or write review text without the client's OK. Logos live in `docs/assets/clients/`, trimmed from Carl's "Client logo" folder with a stdlib PNG trimmer (no PIL on Carl's Mac), resized to 120px tall.
 
 ## "Who we work with" (Home and Who We Are)
 
-Carl's decision (Oct 2026): **no client names or logos** in this list, so it needs no brand approval. Each client is described by category · marketplaces · service. Only the reviews name a client (Wildfang, Wickers, Warrior). Keep both pages' lists identical.
+Each client shows its **logo** above category · marketplaces · service (Carl, Oct 2026). Carl is sending the preview to every brand for approval before the site goes live — **Duke and Livingood had not approved logo use as of 13 Oct 2026**; remove a logo if a brand says no. Keep both pages' lists identical.
 
 | Client (internal only) | On the site |
 |---|---|
@@ -62,6 +62,8 @@ Carl's decision (Oct 2026): **no client names or logos** in this list, so it nee
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 
 ## Before moving catalogfix.com to this site (only when Carl approves)
+
+0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
 
 1. Remove `<meta name="robots" content="noindex, nofollow">` from all three pages.
 2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point).
