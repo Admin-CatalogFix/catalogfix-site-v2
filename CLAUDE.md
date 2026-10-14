@@ -27,7 +27,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 | Setting | Effect while empty |
 |---|---|
 | `auditFormUrl` | Set to the Jotform "CatalogFix Audit Form" (form 262799242505060), which follows brief §8. If emptied, every "Get a free audit" button opens an email instead |
-| `whatsappNumber` (digits + country code) | QR box and mobile link show a "coming soon" note. When set, the QR code is generated automatically |
+| `socials` | LinkedIn, Facebook, Instagram, shown as icons in the contact section ("Follow us") and footer of every page. Add a network with one line; icons exist for linkedin, facebook, instagram, youtube (anything else gets a link icon). Carl replaced the brief's WhatsApp QR with socials in Oct 2026 |
 | `emailRot13` | ROT13 of the contact email (currently admin@catalogfix.com). Never put the plain address in HTML or meta tags |
 
 ## Placeholders still on the pages (brief §9 open items)
@@ -66,6 +66,6 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
 
 1. Remove `<meta name="robots" content="noindex, nofollow">` from all three pages.
-2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point).
+2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point). Add the social links as `sameAs` in the Organization structured data. Don't add review/star-rating structured data: the five stars beside "Reviews" are decorative, not a collected rating.
 3. Add `docs/CNAME` containing `catalogfix.com`, and remove the custom domain from the `catalogfix-website` repo's Pages settings first — a domain can only be attached to one repo.
 4. Update the Google Search Console sitemap to the new pages.

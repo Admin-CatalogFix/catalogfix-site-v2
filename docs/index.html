@@ -295,7 +295,19 @@
   <!-- Reviews: real client quotes, approved by the clients. Keep them word for word. -->
   <section class="sect sect--line-top" aria-labelledby="rev-h">
     <div class="wrap">
-      <span class="eyebrow">Reviews</span>
+      <span class="eyebrow eyebrow--stars">
+        Reviews
+        <!-- Decorative: marks this as the reviews section. Not a rating from any one client. -->
+        <svg class="stars" viewBox="0 0 124 24" aria-hidden="true">
+          <g fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(25 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(50 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(75 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(100 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </g>
+        </svg>
+      </span>
       <h2 class="h2" id="rev-h">What clients say.</h2>
 
       <figure class="review review--lead">
@@ -351,12 +363,9 @@
           <a class="link email-link" href="#contact" data-email>Or email us directly</a>
         </div>
       </div>
-      <div class="wa">
-        <div class="wa-desktop">
-          <div class="wa-qr" data-wa-qr><span class="wa-pending">QR code appears here once the WhatsApp number is added.</span></div>
-          <p class="wa-caption">Scan to message us on WhatsApp.</p>
-        </div>
-        <a class="wa-tap link" href="#contact" data-wa-link>Message us on WhatsApp</a>
+      <div class="socials">
+        <p class="socials-label">Follow us</p>
+        <ul class="social-links" data-socials aria-label="CatalogFix on social media"></ul>
       </div>
     </div>
   </section>
@@ -374,6 +383,7 @@
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
     </nav>
+    <ul class="social-links social-links--sm" data-socials aria-label="CatalogFix on social media"></ul>
     <p>&copy; <span data-year>2026</span> CatalogFix</p>
   </div>
 </footer>
