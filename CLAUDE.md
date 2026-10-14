@@ -27,7 +27,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 | Setting | Effect while empty |
 |---|---|
 | `auditFormUrl` | Set to the Jotform "CatalogFix Audit Form" (form 262799242505060), which follows brief §8. If emptied, every "Get a free audit" button opens an email instead |
-| `socials` | LinkedIn, Facebook, Instagram, shown as icons in the contact section ("Follow us") and footer of every page. Add a network with one line; icons exist for linkedin, facebook, instagram, youtube (anything else gets a link icon). Carl replaced the brief's WhatsApp QR with socials in Oct 2026 |
+| `socials` | LinkedIn, Facebook, Instagram, Threads, TikTok, YouTube, X, shown as icons in the contact section ("Follow us", 4-across grid) and footer of every page. Add a network with one line; icons exist for all seven (anything else gets a link icon). Carl replaced the brief's WhatsApp QR with socials in Oct 2026 |
 | `emailRot13` | ROT13 of the contact email (currently admin@catalogfix.com). Never put the plain address in HTML or meta tags |
 
 ## Placeholders still on the pages (brief §9 open items)

@@ -446,6 +446,8 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   color: var(--muted);
 }
 .social-links { display: flex; flex-wrap: wrap; gap: 12px; }
+/* Contact section: fixed four-across grid so seven icons break evenly (4 + 3) instead of 5 + 2 */
+.socials .social-links { display: grid; grid-template-columns: repeat(4, 46px); }
 .social-links a {
   width: 46px;
   height: 46px;
