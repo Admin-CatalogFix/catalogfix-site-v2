@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Preview build: keep it out of search results until it moves to catalogfix.com -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Motion demo | CatalogFix</title>
+  <meta name="description" content="Amazon and Walmart specialists who work as part of your team. Skip the hiring and training. Get a free audit.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/motion.css">
+  <script>if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion-ready'); }</script>
+  <style>.demo-badge { position: fixed; left: 16px; bottom: 16px; z-index: 60; padding: 8px 14px; border-radius: 999px; background: var(--navy); color: var(--white); font: 700 12px var(--f); letter-spacing: 0.06em; }</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CatalogFix home">
+      <img class="brand-icon" src="assets/logo-icon.png" alt="" width="70" height="38">
+      <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="98" height="26">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="who-we-are.html">Who We Are</a>
+      <a href="team.html">Our Team</a>
+      <a class="btn" href="#contact" data-audit>Get a free audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero: headline left, annotated listing right -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-h">Amazon &amp; Walmart experts, built into your team.</h1>
+        <p class="lead"><span class="line">Skip the hiring and training.</span> <span class="line">Work with specialists who already know the job.</span></p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact" data-audit>
+            Get a free audit
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link" href="#how">See how we work</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg class="ld" viewBox="0 0 540 500" role="img" aria-labelledby="ld-t ld-d">
+          <title id="ld-t">Example of listing fixes</title>
+          <desc id="ld-d">Before: a supplement listing suppressed for medical claims, with no main image and a title claiming to cure anxiety and treat migraines. After: the same listing is active, with the claims removed, a clean title and its main image restored.</desc>
+
+          <g class="ld-before">
+            <rect x="1" y="1" width="212" height="156" rx="10" fill="#F6F6F6" stroke="#DDE3EA"/>
+            <text class="ld-label" x="16" y="27" fill="#223F5A" fill-opacity="0.55">BEFORE</text>
+            <rect x="94" y="12" width="112" height="22" rx="11" fill="#FFFFFF" stroke="#DDE3EA"/>
+            <text x="150" y="27" text-anchor="middle" font-size="10" fill="#223F5A" fill-opacity="0.6">Suppressed: claims</text>
+            <rect x="16" y="44" width="64" height="64" rx="6" fill="#FFFFFF" stroke="#C5CFDA" stroke-dasharray="3 3"/>
+            <text x="48" y="80" text-anchor="middle" font-size="9" fill="#223F5A" fill-opacity="0.5">No image</text>
+            <text font-size="9" font-weight="700" fill="#223F5A" fill-opacity="0.5">
+              <tspan x="92" y="56">MAGNESIUM CURES</tspan>
+              <tspan x="92" y="69">ANXIETY INSOMNIA</tspan>
+              <tspan x="92" y="82">TREATS MIGRAINES</tspan>
+            </text>
+            <rect x="92" y="94" width="96" height="6" rx="3" fill="#DDE3EA"/>
+            <rect x="16" y="122" width="180" height="6" rx="3" fill="#DDE3EA"/>
+            <rect x="16" y="136" width="138" height="6" rx="3" fill="#DDE3EA"/>
+          </g>
+
+          <!-- Arrow from before to after (the logo's arrow, as a thin line) -->
+          <g class="ld-arrow">
+            <path class="ld-arrow-line" pathLength="1" d="M222 70 C 290 70, 318 98, 318 150" fill="none" stroke="#E88130" stroke-width="1.75" stroke-linecap="round"/>
+            <path class="ld-arrow-head" d="M310 141 L318 152 L326 141" fill="none" stroke="#E88130" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <g class="ld-after">
+            <rect x="120" y="160" width="418" height="338" rx="12" fill="#FFFFFF" stroke="#DDE3EA" stroke-width="1.5"/>
+            <text class="ld-label" x="142" y="190" fill="#223F5A">AFTER</text>
+            <rect x="446" y="172" width="76" height="26" rx="13" fill="#FFFFFF" stroke="#223F5A" stroke-width="1.2"/>
+            <circle cx="461" cy="185" r="3.5" fill="#E88130"/>
+            <text x="471" y="189.5" font-size="12" font-weight="700" fill="#11283E">Active</text>
+            <text font-size="17" font-weight="700" fill="#11283E">
+              <tspan x="142" y="226">Magnesium Glycinate,</tspan>
+              <tspan x="142" y="248">400 mg, 120 Capsules</tspan>
+            </text>
+
+            <!-- Supplement jar and a capsule -->
+            <rect x="142" y="268" width="170" height="170" rx="8" fill="#F6F6F6"/>
+            <rect x="196" y="298" width="62" height="20" rx="4" fill="#11283E"/>
+            <rect x="190" y="316" width="74" height="104" rx="12" fill="#FFFFFF"/>
+            <rect x="191" y="342" width="72" height="42" fill="#E88130"/>
+            <rect x="204" y="355" width="46" height="4" rx="2" fill="#FFFFFF"/>
+            <rect x="211" y="365" width="32" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.8"/>
+            <rect x="190" y="316" width="74" height="104" rx="12" fill="none" stroke="#223F5A" stroke-width="2"/>
+            <line x1="202" y1="326" x2="202" y2="334" stroke="#DDE3EA" stroke-width="3" stroke-linecap="round"/>
+            <g transform="rotate(-30 284 406)" stroke="#223F5A" stroke-width="1.5">
+              <path d="M276 400 H284 V412 H276 A6 6 0 0 1 276 400 Z" fill="#E88130"/>
+              <path d="M284 400 H292 A6 6 0 0 1 292 412 H284 Z" fill="#FFFFFF"/>
+            </g>
+
+            <text x="332" y="291" font-size="22" font-weight="700" fill="#11283E">$24.99</text>
+            <text x="332" y="313" font-size="12" fill="#223F5A">In stock</text>
+            <g fill="#223F5A">
+              <circle cx="336" cy="341" r="2.2"/><circle cx="336" cy="361" r="2.2"/><circle cx="336" cy="381" r="2.2"/><circle cx="336" cy="401" r="2.2"/><circle cx="336" cy="421" r="2.2"/>
+            </g>
+            <g fill="#DDE3EA">
+              <rect x="346" y="337.5" width="170" height="7" rx="3.5"/>
+              <rect x="346" y="357.5" width="150" height="7" rx="3.5"/>
+              <rect x="346" y="377.5" width="164" height="7" rx="3.5"/>
+              <rect x="346" y="397.5" width="138" height="7" rx="3.5"/>
+              <rect x="346" y="417.5" width="120" height="7" rx="3.5"/>
+              <rect x="142" y="458" width="376" height="7" rx="3.5"/>
+              <rect x="142" y="474" width="300" height="7" rx="3.5"/>
+            </g>
+          </g>
+
+          <!-- Orange notes on the specific fixes -->
+          <g class="ld-note ld-note--1">
+            <rect x="346" y="86" width="172" height="30" rx="15" fill="#E88130"/>
+            <text x="432" y="106" text-anchor="middle">Suppression cleared</text>
+            <line x1="484" y1="116" x2="484" y2="168"/>
+            <circle cx="484" cy="172" r="3.5" fill="#E88130"/>
+          </g>
+          <g class="ld-note ld-note--2">
+            <rect x="376" y="225" width="140" height="30" rx="15" fill="#E88130"/>
+            <text x="446" y="245" text-anchor="middle">Claims removed</text>
+            <line x1="376" y1="240" x2="360" y2="240"/>
+            <circle cx="356" cy="240" r="3.5" fill="#E88130"/>
+          </g>
+          <g class="ld-note ld-note--3">
+            <rect x="4" y="326" width="112" height="50" rx="14" fill="#E88130"/>
+            <text text-anchor="middle"><tspan x="60" y="347">Main image</tspan><tspan x="60" y="365">restored</tspan></text>
+            <line x1="116" y1="351" x2="138" y2="351"/>
+            <circle cx="142" cy="351" r="3.5" fill="#E88130"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we work with: each brand must OK its logo before this goes live on catalogfix.com -->
+  <section class="clients" aria-labelledby="clients-h">
+    <div class="wrap">
+      <h2 class="clients-label" id="clients-h">Who we work with</h2>
+      <ul class="clients-list">
+        <li>
+          <img class="client-logo" src="assets/clients/wildfang.png" alt="Wildfang" width="73" height="56">
+          <span class="client-cat">Pet brand</span>
+          <span class="client-mkt">Amazon&nbsp;US, CA, UK, EU, AU, JP · Walmart · eBay</span>
+          <span class="client-svc">Full account management</span>
+        </li>
+        <li>
+          <img class="client-logo" src="assets/clients/duke.png" alt="Duke" width="119" height="56">
+          <span class="client-cat">Personal defense brand</span>
+          <span class="client-mkt">Amazon&nbsp;US</span>
+          <span class="client-svc">Full account management</span>
+        </li>
+        <li>
+          <img class="client-logo" src="assets/clients/livingood.png" alt="Livingood Daily" width="136" height="56">
+          <span class="client-cat">Supplement brand</span>
+          <span class="client-mkt">Amazon&nbsp;US · Walmart&nbsp;US</span>
+          <span class="client-svc">Catalog &amp; SEO, listing fixes</span>
+        </li>
+        <li>
+          <img class="client-logo" src="assets/clients/wickers.png" alt="Wickers" width="109" height="56">
+          <span class="client-cat">Sports apparel brand</span>
+          <span class="client-mkt">Amazon&nbsp;US</span>
+          <span class="client-svc">Advertising</span>
+        </li>
+        <li>
+          <img class="client-logo" src="assets/clients/warrior.png" alt="Warrior" width="122" height="56">
+          <span class="client-cat">Supplement brand</span>
+          <span class="client-mkt">Amazon&nbsp;EU</span>
+          <span class="client-svc">Advertising</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How we work: three steps, joined by the logo's arrow drawn as a thin orange line -->
+  <section class="sect sect--soft" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="process-head">
+        <span class="eyebrow">How we work</span>
+        <h2 class="h2" id="how-h">Simple from the start.</h2>
+        <p class="lead">No long onboarding, no chasing updates. We start with what's holding your account back, then work alongside your team like we've always been there.</p>
+      </div>
+      <ol class="process">
+        <li>
+          <span class="process-num" aria-hidden="true">01</span>
+          <h3>Audit.</h3>
+          <p>We look at your account first and show you what's holding it back. If we're not the right fit, we'll tell you upfront.</p>
+        </li>
+        <li>
+          <span class="process-num" aria-hidden="true">02</span>
+          <h3>Work.</h3>
+          <p>Your specialist owns the work from day one and talks to you directly. No layers, no messages passed along.</p>
+        </li>
+        <li>
+          <span class="process-num" aria-hidden="true">03</span>
+          <h3>Report.</h3>
+          <p>You get regular updates on what's done and what's blocked, so you always know where things stand.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="sect has-loop" aria-labelledby="cmp-h">
+    <svg class="bg-loop" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M173.7 48.4 A90 90 0 1 0 173.7 151.6" fill="none" stroke="#DDE3EA" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      <path d="M55 177.9 A90 90 0 0 1 15.4 130.8" fill="none" stroke="#E88130" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="wrap">
+      <div class="cmp-head">
+        <span class="eyebrow">Not your typical agency</span>
+        <h2 class="h2" id="cmp-h">CatalogFix is <span class="hl">built for the long term.</span></h2>
+        <p class="lead"><span class="line">A typical agency runs on a churn-driven model.</span> <span class="line">Here&rsquo;s how we compare.</span></p>
+      </div>
+      <div class="cmp-scroll" role="region" aria-labelledby="cmp-h" tabindex="0">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">What you get</span></th>
+              <th scope="col" class="us">CatalogFix</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Direct hire</th>
+              <th scope="col">Freelancer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ready from day one, no training<span class="cmp-desc">Your specialist already knows the work. No ramp-up time.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="varies">Varies</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="varies">Varies</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Full service<span class="cmp-desc">Catalog, SEO, design, ads and reimbursements in one place.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">You talk to the person doing the work<span class="cmp-desc">No layers, no messages passed along.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Works as part of your team<span class="cmp-desc">Your team, plus us. No outside-vendor feel.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="varies">Varies</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Tools included<span class="cmp-desc">We bring our own reporting and research tools. Nothing extra for you to buy or set up.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="varies">Varies</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Easy to add services<span class="cmp-desc">Start with one service and add more when you need them.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">No overhead fees, you pay for the work<span class="cmp-desc">Your money pays for the work, not an agency&rsquo;s admin, HR and executives.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">No % cut from your sales, predictable fees<span class="cmp-desc">Your fee isn&rsquo;t tied to your sales. If it ever changes, we agree it with you first.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="varies">Varies</span></td>
+              <td><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="varies">Varies</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Free audit before you commit<span class="cmp-desc">We show you what&rsquo;s holding your account back first.</span></th>
+              <td class="us"><span class="ic ic-yes" aria-hidden="true"></span><span class="sr-only">Yes</span></td>
+              <td><span class="varies">Varies</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+              <td><span class="ic ic-no" aria-hidden="true"></span><span class="sr-only">No</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cmp-hint">Scroll sideways to see every option.</p>
+    </div>
+  </section>
+
+  <!-- Reviews: real client quotes, approved by the clients. Keep them word for word. -->
+  <section class="sect sect--line-top" aria-labelledby="rev-h">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--stars">
+        Reviews
+        <!-- Decorative: marks this as the reviews section. Not a rating from any one client. -->
+        <svg class="stars" viewBox="0 0 124 24" aria-hidden="true">
+          <g fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(25 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(50 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(75 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <polygon transform="translate(100 0)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </g>
+        </svg>
+      </span>
+      <h2 class="h2" id="rev-h">What clients say.</h2>
+
+      <figure class="review review--lead">
+        <blockquote>
+          <p>&ldquo;Working with Carl has been a game-changer for our Amazon business. Our catalog had grown messy over time &mdash; inconsistent listings, suppressed ASINs, weak SEO, and PPC that wasn&rsquo;t scaling efficiently. We lacked clear ownership and a long-term strategy.</p>
+          <p>Carl and his team stepped in, took full ownership of our catalog, fixed long-standing issues, and built a structure that actually supports long-term growth. Communication was clear, execution was expert-led, and results followed. We finally feel confident that our Amazon account is being handled the right way.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <img class="review-logo review-logo--stacked" src="assets/clients/wildfang.png" alt="Wildfang" width="79" height="60">
+          <span><span class="review-name">Jens Vogel</span>Managing Director, Wildfang</span>
+        </figcaption>
+      </figure>
+
+      <div class="reviews-grid">
+        <figure class="review">
+          <blockquote>
+            <p>&ldquo;Carl took ownership of our PPC from day one. No endless back-and-forth &mdash; just smart strategy, clean execution and steady improvements. Exactly the type of partner we needed.&rdquo;</p>
+          </blockquote>
+          <figcaption>
+            <img class="review-logo" src="assets/clients/wickers.png" alt="Wickers" width="86" height="44">
+            <span><span class="review-name">Joe Woody</span>Owner, Wickers</span>
+          </figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>
+            <p>&ldquo;I&rsquo;ve had the pleasure of working with Carl &amp; CatalogFix as a strategic partner on our Amazon operations. As a client, I&rsquo;ve been consistently impressed by his hard work, meticulous attention to detail, deep expertise in Amazon SEO, PPC, and account management.</p>
+            <p>Carl delivers precise, high-impact results, from optimising campaigns for better visibility, to streamlining account performance that drives real growth; making complex challenges straightforward. He&rsquo;s an invaluable collaborator any Amazon-focused team would be lucky to engage.&rdquo;</p>
+          </blockquote>
+          <figcaption>
+            <img class="review-logo" src="assets/clients/warrior.png" alt="Warrior" width="96" height="44">
+            <span><span class="review-name">Max N.</span>Amazon International Manager, Warrior</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (same block on every page) -->
+  <section class="contact sect" id="contact" aria-labelledby="contact-h">
+    <svg class="contact-swoosh" viewBox="0 0 620 260" aria-hidden="true">
+      <path class="swoosh-line" pathLength="1" d="M0 230 C 170 230, 220 60, 390 60 L 600 60" fill="none" stroke="#E88130" stroke-width="1.5" stroke-linecap="round"/>
+      <path class="swoosh-head" d="M586 48 L600 60 L586 72" fill="none" stroke="#E88130" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-h">Tell us what's going on with your catalog.</h2>
+        <div class="contact-actions">
+          <a class="btn" href="#contact" data-audit>
+            Get a free audit
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link email-link" href="#contact" data-email>Or email us directly</a>
+        </div>
+      </div>
+      <div class="socials">
+        <p class="socials-label">Follow us</p>
+        <ul class="social-links" data-socials aria-label="CatalogFix on social media"></ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CatalogFix home">
+      <img class="brand-icon" src="assets/logo-icon.png" alt="" width="56" height="30">
+      <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="75" height="20">
+    </a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="who-we-are.html">Who We Are</a>
+      <a href="team.html">Our Team</a>
+    </nav>
+    <ul class="social-links social-links--sm" data-socials aria-label="CatalogFix on social media"></ul>
+    <p>&copy; <span data-year>2026</span> CatalogFix</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script src="assets/motion.js"></script>
+<div class="demo-badge">Motion demo · not live</div>
+</body>
+</html>

@@ -61,6 +61,10 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - **Process: propose copy and layout to Carl and get his OK before building or pushing changes.**
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 
+## Motion demo (proposal, not adopted yet)
+
+`docs/motion-demo.html` is a copy of Home used to show Carl two proposals: the **supplement** version of the hero listing (suppressed for medical claims) and subtle motion (`assets/motion.css` + `assets/motion.js`, only linked from the demo). Motion: hero plays in once on load; process line and contact arrow draw when scrolled into view; sections below the fold fade up; the logo loop turns slowly behind the comparison headline. All of it is off for reduced-motion visitors. If Carl approves, port the hero SVG and the asset links into the real pages, then delete the demo page. If he rejects it, delete the demo and the two motion files.
+
 ## Before moving catalogfix.com to this site (only when Carl approves)
 
 0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
