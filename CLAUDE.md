@@ -63,7 +63,16 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 
 ## Motion demo (proposal, not adopted yet)
 
-`docs/motion-demo.html` is a copy of Home used to show Carl two proposals: the **supplement** version of the hero listing (suppressed for medical claims) and subtle motion (`assets/motion.css` + `assets/motion.js`, only linked from the demo). Motion: hero plays in once on load; process line and contact arrow draw when scrolled into view; sections below the fold fade up; the logo loop turns slowly behind the comparison headline. All of it is off for reduced-motion visitors. If Carl approves, port the hero SVG and the asset links into the real pages, then delete the demo page. If he rejects it, delete the demo and the two motion files.
+`docs/motion-demo.html` is a copy of Home used to show Carl proposals before they touch the real pages. It loads `assets/motion.css` + `assets/motion.js`, which no other page loads. Current contents (Oct 2026):
+- **Supplement hero:** listing suppressed for medical claims (instead of the water bottle).
+- **Hero loop (11s):** arrow draws, after card rises, three notes appear, holds about 6s, fades, replays.
+- **Process line (9s loop):** draws slowly through 01 → 02 → 03; each step circle turns orange as the line reaches it.
+- **One-time effects:** contact arrow sweeps in; orange arrow underline draws under "built for the long term."; sections below the fold fade up.
+- **Small loops:** stars beside "Reviews" wave every 4.5s; the faint logo loop behind the comparison headline turns once a minute.
+- **Buttons:** arrows nudge on hover.
+- **Frozen header:** comparison table header pinned under the menu on tablet and up (in motion.css for now; it belongs in styles.css once approved). The section uses `overflow: clip`, not `hidden`, because `hidden` breaks sticky positioning.
+
+All motion is off for reduced-motion visitors. If Carl approves, move what he keeps into the real pages and delete the demo page. If he rejects it, delete the demo and the two motion files.
 
 ## Before moving catalogfix.com to this site (only when Carl approves)
 

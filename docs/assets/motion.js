@@ -33,17 +33,4 @@
   window.addEventListener('beforeprint', function () {
     each('.reveal, .will-draw', function (el) { el.classList.add('in-view'); });
   });
-
-  var loop = document.querySelector('.bg-loop');
-  if (loop) {
-    var ticking = false;
-    window.addEventListener('scroll', function () {
-      if (ticking) { return; }
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        loop.style.transform = 'rotate(' + (window.scrollY * 0.03).toFixed(2) + 'deg)';
-        ticking = false;
-      });
-    }, { passive: true });
-  }
 }());
