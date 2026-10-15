@@ -1,11 +1,11 @@
-/* CatalogFix motion (demo). Subtle, loops with long rests, and off entirely for people who ask
-   for reduced motion. Hidden starting states only apply to classes that motion.js (or the inline
+/* CatalogFix motion. Subtle, loops with long rests, and off entirely for people who ask for
+   reduced motion. Hidden starting states only apply to classes that motion.js (or the inline
    head script) adds, so if a script fails to load nothing stays hidden. */
 
 @media (prefers-reduced-motion: no-preference) {
 
-  /* 1. Hero listing, looping every 11s. The before card stays; the arrow draws, the after card
-        rises, the three notes appear one by one, everything holds ~6s, then fades and replays. */
+  /* 1. Hero listing (Home), looping every 11s. The before card stays; the arrow draws, the after
+        card rises, the three notes appear one by one, everything holds ~6s, then fades and replays. */
   .motion-ready .ld .ld-before { animation: ld-fade 0.5s ease-out both; }
   .motion-ready .ld .ld-arrow-line { stroke-dasharray: 1; animation: ld-arrow-line 11s ease-in-out infinite; }
   .motion-ready .ld .ld-arrow-head { animation: ld-arrow-head 11s ease-out infinite; }
@@ -15,7 +15,7 @@
   .motion-ready .ld .ld-note--2 { animation: ld-note-2 11s ease-out infinite; }
   .motion-ready .ld .ld-note--3 { animation: ld-note-3 11s ease-out infinite; }
 
-  /* 2. Process line: draws slowly through 01 → 02 → 03, lighting each step as it arrives,
+  /* 2. Process line (Home): draws slowly through 01 → 02 → 03, lighting each step as it arrives,
         holds, fades, and repeats every 9s. Starts once the section scrolls into view. */
   .will-draw.process::before { transform: scaleX(0); transform-origin: left center; }
   .will-draw.process::after { opacity: 0; }
@@ -25,13 +25,13 @@
   .will-draw.process.in-view li:nth-child(2) .process-num { animation: proc-step-2 9s linear infinite; }
   .will-draw.process.in-view li:nth-child(3) .process-num { animation: proc-step-3 9s linear infinite; }
 
-  /* 3. Contact arrow sweeps in once */
+  /* 3. Contact arrow (every page, wide screens) sweeps in once */
   .will-draw.contact-swoosh .swoosh-line { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.4s ease-in-out; }
   .will-draw.contact-swoosh .swoosh-head { opacity: 0; transition: opacity 0.3s ease 1.3s; }
   .will-draw.contact-swoosh.in-view .swoosh-line { stroke-dashoffset: 0; }
   .will-draw.contact-swoosh.in-view .swoosh-head { opacity: 1; }
 
-  /* 4. Orange arrow underline draws once under "built for the long term." */
+  /* 4. Orange arrow underline draws once under "built for the long term." (Home) */
   .cmp-head.reveal .hl-arrow::before { transform: scaleX(0); transition: transform 1s ease-in-out 0.6s; }
   .cmp-head.reveal .hl-arrow::after { opacity: 0; transition: opacity 0.3s ease 1.5s; }
   .cmp-head.reveal.in-view .hl-arrow::before { transform: none; }
@@ -41,7 +41,7 @@
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
   .reveal.in-view { opacity: 1; transform: none; }
 
-  /* 6. Stars beside "Reviews": a small wave every 4.5s */
+  /* 6. Stars beside "Reviews" (Home): a small wave every 4.5s */
   .stars .star { transform-box: fill-box; transform-origin: center; animation: star-wave 4.5s ease-in-out infinite; }
   .stars-row > g:nth-child(2) .star { animation-delay: 0.12s; }
   .stars-row > g:nth-child(3) .star { animation-delay: 0.24s; }
@@ -51,9 +51,6 @@
   /* 7. Button arrows nudge forward on hover */
   .btn svg { transition: transform 0.2s ease; }
   .btn:hover svg { transform: translateX(3px); }
-
-  /* 8. The logo loop behind the long-term headline turns slowly, one turn a minute */
-  .bg-loop { animation: loop-spin 60s linear infinite; }
 }
 
 @media (prefers-reduced-motion: no-preference) and (max-width: 760px) {
@@ -86,61 +83,3 @@
 @keyframes proc-step-3 { 0%, 25% { background: var(--soft); } 27%, 85% { background: var(--orange); } 92%, 100% { background: var(--soft); } }
 
 @keyframes star-wave { 0%, 12%, 100% { transform: translateY(0); } 6% { transform: translateY(-5px); } }
-@keyframes loop-spin { to { transform: rotate(360deg); } }
-
-/* ── Static parts of the demo additions ───────────────────────── */
-
-/* The logo's "C" loop, large, faint and cropped, behind the "built for the long term" headline */
-.has-loop { position: relative; overflow: hidden; overflow: clip; }   /* clip, not hidden, so the sticky table header still works */
-.has-loop > .wrap { position: relative; z-index: 1; }
-.has-loop .cmp-scroll { background: var(--white); }                     /* the loop passes behind the table, never through it */
-.bg-loop { position: absolute; top: -150px; right: -190px; width: 560px; height: 560px; pointer-events: none; }
-.stars { overflow: visible; }
-
-/* Orange arrow underline under "built for the long term." (tablet and up).
-   A straight line with an arrowhead, sized in em so it scales with the headline. */
-.hl-arrow { position: relative; }
-@media (min-width: 761px) {
-  .hl-arrow::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0.06em;
-    bottom: -0.1em;
-    height: max(2px, 0.055em);
-    border-radius: 2px;
-    background: var(--orange);
-    transform-origin: left center;
-  }
-  .hl-arrow::after {
-    content: "";
-    position: absolute;
-    right: 0.04em;
-    bottom: -0.1725em;
-    width: 0.2em;
-    height: 0.2em;
-    border-top: max(2px, 0.055em) solid var(--orange);
-    border-right: max(2px, 0.055em) solid var(--orange);
-    transform: rotate(45deg);
-  }
-}
-
-/* Comparison table: column names stay pinned under the menu while you scroll the table.
-   Tablet and up only; on phones the table scrolls sideways instead. */
-@media (min-width: 761px) {
-  .cmp-scroll { overflow: visible; }
-  .cmp thead th {
-    position: sticky;
-    top: var(--head);
-    z-index: 2;
-    background: var(--white);
-    box-shadow: inset 0 -1px 0 var(--line);   /* keeps the divider visible while pinned */
-  }
-  .cmp thead th.us { background: var(--soft); }
-  .cmp thead th:first-child { z-index: 3; border-top-left-radius: 10px; }
-  .cmp thead th:last-child { border-top-right-radius: 10px; }
-  .cmp tbody tr:last-child th { border-bottom-left-radius: 10px; }
-  .cmp tbody tr:last-child td:last-child { border-bottom-right-radius: 10px; }
-}
-
-@media (max-width: 760px) { .bg-loop { display: none; } }

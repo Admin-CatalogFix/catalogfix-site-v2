@@ -61,18 +61,16 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - **Process: propose copy and layout to Carl and get his OK before building or pushing changes.**
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 
-## Motion demo (proposal, not adopted yet)
+## Motion (approved by Carl, Oct 2026)
 
-`docs/motion-demo.html` is a copy of Home used to show Carl proposals before they touch the real pages. It loads `assets/motion.css` + `assets/motion.js`, which no other page loads. Current contents (Oct 2026):
-- **Supplement hero:** listing suppressed for medical claims (instead of the water bottle).
-- **Hero loop (11s):** arrow draws, after card rises, three notes appear, holds about 6s, fades, replays.
-- **Process line (9s loop):** draws slowly through 01 → 02 → 03; each step circle turns orange as the line reaches it.
-- **One-time effects:** contact arrow sweeps in; orange arrow underline draws under "built for the long term."; sections below the fold fade up.
-- **Small loops:** stars beside "Reviews" wave every 4.5s; the faint logo loop behind the comparison headline turns once a minute.
-- **Buttons:** arrows nudge on hover.
-- **Frozen header:** comparison table header pinned under the menu on tablet and up (in motion.css for now; it belongs in styles.css once approved). The section uses `overflow: clip`, not `hidden`, because `hidden` breaks sticky positioning.
+All three pages load `assets/motion.css` + `assets/motion.js`, plus a one-line head script that adds `.motion-ready` (so the hero doesn't flash before animating). Everything is off for reduced-motion visitors, and hidden starting states only apply to classes the scripts add.
+- **Home hero:** supplement listing suppressed for medical claims. It loops every 11s: arrow draws, after card rises, three notes appear, holds, replays.
+- **Home process:** the line draws slowly through 01 → 02 → 03 and each step circle turns orange as it arrives. Loops every 9s once scrolled into view.
+- **Home extras:** the orange arrow underline under "built for the long term." draws once; the stars beside "Reviews" wave every 4.5s.
+- **Every page:** sections below the fold fade up once; the contact arrow (wide screens) sweeps in once; button arrows nudge on hover.
+- **Rejected by Carl:** a faint rotating logo circle behind the comparison headline. Don't bring it back. Keep motion meaningful (arrows, progress), at most one moving thing per section.
 
-All motion is off for reduced-motion visitors. If Carl approves, move what he keeps into the real pages and delete the demo page. If he rejects it, delete the demo and the two motion files.
+The comparison table header stays pinned under the menu on tablet and up (styles.css). It needs no ancestor with `overflow: hidden`.
 
 ## Before moving catalogfix.com to this site (only when Carl approves)
 
