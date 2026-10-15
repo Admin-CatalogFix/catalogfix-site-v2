@@ -356,7 +356,8 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .cmp { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px; }
 .cmp th, .cmp td { padding: 17px 20px; text-align: center; border-bottom: 1px solid var(--line); }
 .cmp tbody tr:last-child > * { border-bottom: 0; }
-.cmp thead th { font-size: 15px; font-weight: 700; color: var(--navy); vertical-align: bottom; }
+/* Header row: Medium Navy with white text; the CatalogFix cell is orange so "us" stands out */
+.cmp thead th { font-size: 15px; font-weight: 700; color: var(--white); background: var(--navy-m); vertical-align: bottom; }
 .cmp tbody th { text-align: left; font-weight: 500; color: var(--navy); line-height: 1.4; }
 .cmp th:first-child {
   position: sticky;
@@ -368,7 +369,16 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   border-right: 1px solid var(--line);
 }
 .cmp .us { background: var(--soft); }
-.cmp thead .us { border-top: 3px solid var(--orange); font-size: 16px; }
+.cmp thead th.us { background: var(--orange); color: var(--navy); border-top: 3px solid var(--orange); font-size: 16px; }
+.cmp thead th:first-child { background: var(--navy-m); border-right-color: rgba(255, 255, 255, 0.18); }
+
+/* Row highlight on hover, so each row is easy to read across (mouse and trackpad only).
+   Colours are light tints of Pale Navy. */
+@media (hover: hover) {
+  .cmp tbody tr > * { transition: background-color 0.15s ease; }
+  .cmp tbody tr:hover > * { background: #EEF1F5; }
+  .cmp tbody tr:hover > .us { background: #E4E9EF; }
+}
 .cmp-hint { display: none; margin-top: 12px; font-size: 14px; color: var(--muted); }
 
 /* Column names stay pinned under the menu while you scroll the table (tablet and up).
@@ -380,10 +390,10 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
     position: sticky;
     top: var(--head);
     z-index: 2;
-    background: var(--white);
+    background: var(--navy-m);
     box-shadow: inset 0 -1px 0 var(--line);   /* keeps the divider visible while pinned */
   }
-  .cmp thead th.us { background: var(--soft); }
+  .cmp thead th.us { background: var(--orange); }
   .cmp thead th:first-child { z-index: 3; border-top-left-radius: 10px; }
   .cmp thead th:last-child { border-top-right-radius: 10px; }
   .cmp tbody tr:last-child th { border-bottom-left-radius: 10px; }
@@ -517,9 +527,6 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.social-links--sm { gap: 10px; }
-.social-links--sm a { width: 38px; height: 38px; }
-.social-links--sm svg { width: 17px; height: 17px; }
 
 @media (max-width: 1199px) { .contact-swoosh { display: none; } }
 @media (max-width: 760px) {
@@ -535,6 +542,12 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .foot-nav { display: flex; flex-wrap: wrap; gap: 8px 28px; }
 .foot-nav a { text-decoration: none; }
 .foot-nav a:hover { color: var(--navy); text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 4px; }
+
+/* Footer QR code: scan (desktop) or tap (phone) to open the /links page */
+.foot-qr { display: flex; align-items: center; gap: 12px; font-size: 13px; line-height: 1.35; color: var(--navy-m); text-decoration: none; }
+.foot-qr img { width: 96px; height: 96px; border: 1px solid var(--line); border-radius: 8px; }
+.foot-qr span { max-width: 90px; }
+.foot-qr:hover span { color: var(--navy); text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 4px; }
 
 /* ── Inner page header (Who We Are, Our Team) ── */
 .page-head { padding: clamp(56px, 8vw, 104px) 0 clamp(28px, 4vw, 44px); }
@@ -648,3 +661,57 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .member-role { font-size: 16px; }
 .member.is-placeholder .avatar { border: 1.5px dashed var(--line); }
 .member.is-placeholder .member-name { color: var(--muted); }
+
+/* ── Links page (/links): QR landing page, mobile first ── */
+.links-page { background: var(--soft); }
+.links {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 20px 36px;
+}
+.links-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 28px; text-decoration: none; }
+.links-brand .brand-icon { height: 48px; }
+.links-brand .brand-word { height: 32px; }
+.links-title { font-size: 26px; text-align: center; margin-bottom: 8px; }
+.links-lead { font-size: 16px; text-align: center; margin-bottom: 28px; text-wrap: balance; }
+.links-list { display: flex; flex-direction: column; gap: 12px; }
+.links-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color var(--t);
+}
+.links-btn:hover, .links-btn:focus-visible { border-color: var(--orange); }
+.links-btn svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.links-btn span { flex: 1; }
+/* Small arrow on the right, the brand's arrow motif */
+.links-btn::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid var(--orange);
+  border-right: 1.5px solid var(--orange);
+  transform: rotate(45deg);
+}
+.links-foot { margin-top: auto; padding-top: 32px; font-size: 14px; text-align: center; }

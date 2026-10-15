@@ -5,20 +5,25 @@ New 3-page site built from `CATALOGFIX_WEBSITE_BRIEF.md`. **The brief is the sou
 ## Where things are
 
 ```
-docs/                    ← GitHub Pages publishes this folder only
+docs/                    ← GitHub Pages publishes this folder only (it's the "public" folder)
 ├── index.html           Home
 ├── who-we-are.html      Who We Are (jump menu: who / different / what)
 ├── team.html            Our Team
+├── links.html           /links: social links page for the QR code (not in the menu)
+├── qr/                  QR codes for /links (generated; see below)
 ├── .nojekyll
 └── assets/
     ├── styles.css       all styling, shared by every page
     ├── site.js          CONFIG block at the top + shared behaviour
+    ├── motion.css/js    animations (all pages except /links)
+    ├── og-image.jpg     1200×630 share image (copied from the live site repo)
     ├── logo-icon.png, logo-wordmark.png   (copied from the live site repo)
     └── favicon.png, apple-touch-icon.png
+scripts/make-qr.swift    regenerates docs/qr/ (not published)
 CATALOGFIX_WEBSITE_BRIEF.md   ← brief (not published on the site)
 ```
 
-Plain HTML/CSS/JS. No build step. Header, contact section and footer are repeated in each of the three HTML files — **change all three** when editing them.
+Plain HTML/CSS/JS. No build step. A page's file name is its address: GitHub Pages serves `/team` from `team.html` (query strings kept), so `links.html` is `/links`. Header, contact section and footer are repeated in each of the three main HTML files — **change all three** when editing them.
 
 Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `main` branch, `/docs`).
 
@@ -27,7 +32,14 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 | Setting | Effect while empty |
 |---|---|
 | `auditFormUrl` | Set to the Jotform "CatalogFix Audit Form" (form 262799242505060), which follows brief §8. If emptied, every "Get a free audit" button opens an email instead |
-| `socials` | LinkedIn, Facebook, Instagram, Threads, TikTok, YouTube, X, shown as icons in the contact section ("Follow us", 4-across grid) and footer of every page. Add a network with one line; icons exist for all seven (anything else gets a link icon). Carl replaced the brief's WhatsApp QR with socials in Oct 2026 |
+| `socials` | LinkedIn, Facebook, Instagram, Threads, TikTok, YouTube, X. Shown as icons in the contact section ("Follow us", 4-across grid) and as full-width buttons on /links. Add a network with one line; icons exist for all seven (anything else gets a link icon). Also update the `<noscript>` fallback list in links.html. Carl replaced the brief's WhatsApp QR with socials in Oct 2026 |
+
+## /links page and QR code (Oct 2026)
+
+- `links.html` = one page with every social profile, for people scanning the QR. Logo, then one button per network (rendered from `CONFIG.socials`). Not in the menu. `noindex`, with Open Graph tags pointing at catalogfix.com.
+- The **footer** of the three main pages shows the QR (`qr/qr-links.svg`, 96px) instead of social icons, linking to `links.html` ("Scan or tap to follow us").
+- QR target: `https://catalogfix.com/links?src=qr`. It only works once catalogfix.com serves this site. `?src=qr` is only counted once an analytics tool is added (none installed yet).
+- Regenerate: `swift scripts/make-qr.swift` (Mac, no installs; edit `targetURL` at the top). It writes `docs/qr/qr-links.svg`, `qr-links.png` (1000×1000), and `qr-links-icon.*` (CF icon in the centre). It then decodes the PNGs with Apple Vision and exits non-zero if they don't match. Settings: level H, Medium Navy #223F5A on white, 4-module border.
 | `emailRot13` | ROT13 of the contact email (currently admin@catalogfix.com). Never put the plain address in HTML or meta tags |
 
 ## Placeholders still on the pages (brief §9 open items)
@@ -56,8 +68,9 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - Banned words: stewardship, compounding, world-class, game-changing, cutting-edge.
 - Never say "no account manager" or "weekly" reports (say "regular"). Don't centre on Slack.
 - Carl's wording (Oct 2026): **"Not your typical agency"** replaces "not an agency". Use it only as a contrast, never as the intro. It's the eyebrow of the comparison section, whose headline is "CatalogFix is **built for the long term.**" (highlight in Deep Orange via `.hl`) and lead "A typical agency runs on a churn-driven model."
+- Home section order (Oct 2026): hero → Who we work with → What we do (services; same copy as Who We Are) → How we work → comparison → reviews → contact.
 - Home "How we work" (approved by Carl, Oct 2026): heading "Simple from the start.", three steps **Audit / Work / Report** (the brief's steps minus "Match"), joined by a thin orange arrow line. It merges the brief with the live site's tone — don't swap in the live site's "Reach Out / We Assess / We Get to Work" copy.
-- Comparison table column order: CatalogFix, Agency, Direct hire, Freelancer. Each row has a one-line description (`.cmp-desc`). Fee row wording is deliberate: Carl may renegotiate fees after big results, so never promise fees won't rise — the point is they aren't tied to sales and any change is agreed first.
+- Comparison table: header row in Medium Navy (#223F5A) with white text, CatalogFix header cell orange with navy text (Carl's chosen 'sparing' use of navy). Rows tint on hover (mouse only). Column order: CatalogFix, Agency, Direct hire, Freelancer. Each row has a one-line description (`.cmp-desc`). Fee row wording is deliberate: Carl may renegotiate fees after big results, so never promise fees won't rise — the point is they aren't tied to sales and any change is agreed first.
 - **Process: propose copy and layout to Carl and get his OK before building or pushing changes.**
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
 

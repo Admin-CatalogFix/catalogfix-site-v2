@@ -76,6 +76,20 @@ var CONFIG = {
     });
   });
 
+  // Full-width buttons on the /links page (QR landing page). Same tab, so "back" returns to the list.
+  each('[data-social-buttons]', function (list) {
+    CONFIG.socials.forEach(function (s) {
+      if (!s.url) { return; }
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.className = 'links-btn';
+      a.href = s.url;
+      a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[s.icon] || ICONS.link) + '</svg><span>' + s.name + '</span>';
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  });
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
   if (toggle && nav) {
