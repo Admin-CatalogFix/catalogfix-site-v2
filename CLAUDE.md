@@ -93,3 +93,4 @@ The comparison table header stays pinned under the menu on tablet and up (styles
 2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point). Add the social links as `sameAs` in the Organization structured data. Don't add review/star-rating structured data: the five stars beside "Reviews" are decorative, not a collected rating.
 3. Add `docs/CNAME` containing `catalogfix.com`, and remove the custom domain from the `catalogfix-website` repo's Pages settings first — a domain can only be attached to one repo.
 4. Update the Google Search Console sitemap to the new pages.
+5. After catalogfix.com/links works: add the links page to the Jotform thank-you message (and the confirmation email, if it is set up), as a tappable link, plus optionally the QR for desktop visitors. Propose the wording to Carl first, then re-sync the Jotform → Google Sheet if the form changes.
