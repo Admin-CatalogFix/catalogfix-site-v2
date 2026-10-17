@@ -48,7 +48,21 @@
   .stars-row > g:nth-child(4) .star { animation-delay: 0.36s; }
   .stars-row > g:nth-child(5) .star { animation-delay: 0.48s; }
 
-  /* 7. Button arrows nudge forward on hover */
+  /* 7. Services (Home, Who We Are): once, the four services rise one after another, each orange
+        line draws in, and the navy "Full account management" bar arrives last (~1s in all) */
+  .will-draw.services .svc { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+  .will-draw.services .svc::before { transform: scaleX(0); transition: transform 0.5s ease-out 0.25s; }
+  .will-draw.services.in-view .svc { opacity: 1; transform: none; }
+  .will-draw.services.in-view .svc::before { transform: none; }
+  .will-draw.services .svc:nth-child(2) { transition-delay: 0.12s; }
+  .will-draw.services .svc:nth-child(3) { transition-delay: 0.24s; }
+  .will-draw.services .svc:nth-child(4) { transition-delay: 0.36s; }
+  .will-draw.services .svc:nth-child(5) { transition-delay: 0.6s; }
+  .will-draw.services .svc:nth-child(2)::before { transition-delay: 0.37s; }
+  .will-draw.services .svc:nth-child(3)::before { transition-delay: 0.49s; }
+  .will-draw.services .svc:nth-child(4)::before { transition-delay: 0.61s; }
+
+  /* 8. Button arrows nudge forward on hover */
   .btn svg { transition: transform 0.2s ease; }
   .btn:hover svg { transform: translateX(3px); }
 }

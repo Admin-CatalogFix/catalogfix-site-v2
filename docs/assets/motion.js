@@ -18,12 +18,12 @@
   // Only animate things that start below the fold; anything already on screen at load stays as is.
   function belowFold(el) { return el.getBoundingClientRect().top > window.innerHeight; }
 
-  each('.what-grid, .markets, .process-head, .cmp-head, .cmp-scroll, .review--lead, .reviews-grid, .clients .wrap, .contact-grid', function (el) {
+  each('.markets, .process-head, .cmp-head, .cmp-scroll, .review--lead, .reviews-grid, .clients .wrap, .contact-grid', function (el) {
     if (!belowFold(el)) { return; }
     el.classList.add('reveal');
     io.observe(el);
   });
-  each('.process, .contact-swoosh', function (el) {
+  each('.process, .services, .contact-swoosh', function (el) {
     if (!belowFold(el)) { return; }
     el.classList.add('will-draw');
     io.observe(el);
