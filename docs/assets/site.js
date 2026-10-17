@@ -8,7 +8,7 @@ var CONFIG = {
   // youtube and x; anything else gets a link icon.
   socials: [
     { name: 'LinkedIn',  icon: 'linkedin',  url: 'https://www.linkedin.com/company/catalogfix' },
-    { name: 'Facebook',  icon: 'facebook',  url: 'https://www.facebook.com/profile.php?id=61593330746479' },
+    { name: 'Facebook',  icon: 'facebook',  url: 'https://www.facebook.com/catalogfix/' },
     { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/catalogfix' },
     { name: 'Threads',   icon: 'threads',   url: 'https://www.threads.com/@catalogfix' },
     { name: 'TikTok',    icon: 'tiktok',    url: 'https://www.tiktok.com/@catalogfix' },
