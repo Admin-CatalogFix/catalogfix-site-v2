@@ -18,6 +18,7 @@ docs/                    ← GitHub Pages publishes this folder only (it's the "
     ├── site.js          CONFIG block at the top + shared behaviour
     ├── motion.css/js    animations (all pages except /links)
     ├── og-image.jpg     1200×630 share image (copied from the live site repo)
+    ├── team/            team photos, 320×320 JPEG
     ├── logo-icon.png, logo-wordmark.png   (copied from the live site repo)
     └── favicon.png, apple-touch-icon.png
 scripts/make-qr.swift    regenerates docs/qr/ (not published)
@@ -58,8 +59,8 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 | 004 Livingood Daily | Supplement brand · Amazon US · Walmart US · Catalog & SEO, listing fixes |
 | 002 Wickers Sports | Sports apparel brand · Amazon US · Advertising |
 | 003 Warrior (formerly KBF Enterprises) | Supplement brand · Amazon EU · Advertising |
-- **Team** — only Carl is listed. Add each person only after they've agreed to be listed (brief §7). Copy a placeholder `<li>`, remove `is-placeholder`.
-- **"Many of us came from agencies"** — Who We Are uses the safe fallback "Our founder came from agencies." until Carl confirms (HTML comment marks the spot).
+- **Team** (built 20 Oct 2026, everyone agreed to be listed): Carl as the featured founder (Founder & Account Director), then John Edward Manulat (Head of Growth · Catalog & SEO), Thea Nin Lachica (Walmart Account Manager), Kathleen Malicdem and Aiko Lemeric (Catalog & SEO), Julia Cruz (Design & content), Shalee Gernandizo (Advertising/PPC). Each has a photo (`docs/assets/team/<first name>.jpg`, 320×320 JPEG, from their LinkedIn photo), a short bio and a LinkedIn link. Bios use only facts from the person's own LinkedIn profile and never name former employers. Add someone new only after they agree (brief §7).
+- **"Many of us came from agencies"** — confirmed by Carl, 20 Oct 2026 (five of the seven came from agencies), and now on Who We Are.
 - **Extra services** (account health & appeals, Brand Registry, category ungating, Vine): decided Oct 2026. They're on the Services page, not in the short "What we do" summary.
 
 ## Rules from the brief that are easy to break
@@ -84,7 +85,8 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - Seven rows: Catalog & SEO · Design & content · Advertising · Reimbursements · Account health & Seller Support · Brand Registry, ungating & Vine · Full account management (navy panel). Then "One fix, or ongoing support" (with the pricing line Carl approved) and the contact section.
 - Vine says "enrolling eligible products" only. Never "review strategy", since Amazon is strict about anything that sounds like influencing reviews.
 - Home and Who We Are keep the short "What we do" summary, linking here ("See every service in detail →").
-- Still to do for SPP (not built yet): expertise on the Team page (Carl's bio, specialists once they agree, remove the "Name to be added" placeholder cards), and 2–3 case studies with real numbers and each client's OK. Then move catalogfix.com to this site before reapplying.
+- Team page expertise: done (20 Oct 2026).
+- Still to do for SPP: **credentials**, since none are on the site yet. The relevant certifications have expired (Carl's Amazon Ads Advanced Retail, Jan 2025; Thea's Walmart Connect, Dec 2024), so don't list them. Add a credentials line per person once they renew or take free Amazon Ads / Walmart Connect certifications. **2–3 case studies** with real numbers and each client's OK. Then move catalogfix.com to this site before reapplying.
 
 ## Motion (approved by Carl, Oct 2026)
 
