@@ -565,6 +565,11 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .jump a { color: var(--navy); font-weight: 700; text-decoration: none; }
 .jump a:hover { text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 5px; }
 .jump a + a::before { content: "·"; padding: 0 14px; color: var(--muted); font-weight: 400; }
+/* On phones the links wrap, so drop the dots (they'd start a line) and space them out instead */
+@media (max-width: 560px) {
+  .jump { gap: 12px 22px; }
+  .jump a + a::before { content: none; }
+}
 
 /* ── Who we are: story ──────────────────────── */
 .story-grid {
@@ -658,6 +663,46 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   .svc--all { padding: 18px 20px; }
   .svc--all dd::before { display: none; }
   .markets::before { flex-basis: 32px; }
+}
+
+.svc-more { margin-top: 18px; }
+
+/* ── Services page: one row per service ─────── */
+.sd {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 20px clamp(40px, 6vw, 96px);
+  padding: clamp(36px, 4.5vw, 52px) 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--head) + 12px);
+}
+.sd::before { content: ""; position: absolute; top: -1px; left: 0; width: 48px; height: 2px; background: var(--orange); }
+.sd h2 { font-size: clamp(26px, 2.8vw, 34px); margin-bottom: 12px; }
+.sd-sum { max-width: 380px; font-size: clamp(18px, 1.6vw, 20px); line-height: 1.5; }
+.sd-label { display: block; margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.sd-list { display: grid; gap: 12px; list-style: none; }
+.sd-list li { position: relative; padding-left: 26px; line-height: 1.55; }
+.sd-list li::before { content: ""; position: absolute; left: 0; top: 0.8em; width: 12px; height: 2px; background: var(--orange); }
+.sd-list b { color: var(--navy); }
+.sd-fit { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.55; }
+.sd-fit .sd-label { margin-bottom: 6px; }
+/* Full account management: the page's one navy panel, like the bar in "What we do" */
+.sd--all { margin-top: 12px; padding: clamp(32px, 4vw, 48px); border: 0; border-radius: var(--r); background: var(--navy-m); color: rgba(255, 255, 255, 0.86); }
+.sd--all::before { display: none; }
+.sd--all h2, .sd--all .sd-list b { color: var(--white); }
+.sd--all .sd-label { color: rgba(255, 255, 255, 0.7); }
+.sd--all .sd-fit { border-top-color: rgba(255, 255, 255, 0.2); }
+.engage { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 20px clamp(40px, 6vw, 96px); }
+.engage .h2 { margin-bottom: 0; }
+.engage-copy p { max-width: 600px; }
+.engage-copy p + p { margin-top: 18px; }
+.engage-copy .link { font-weight: 700; }
+
+@media (max-width: 760px) {
+  .sd, .engage { grid-template-columns: 1fr; }
+  .sd { gap: 18px; }
+  .sd--all { padding: 28px 22px; }
 }
 
 /* ── Our team ───────────────────────────────── */

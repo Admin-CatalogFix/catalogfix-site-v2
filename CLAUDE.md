@@ -1,6 +1,6 @@
 # CatalogFix website v2
 
-New 3-page site built from `CATALOGFIX_WEBSITE_BRIEF.md`. **The brief is the source of truth for copy** — read it before changing any wording, and don't add claims it doesn't make.
+New 4-page site built from `CATALOGFIX_WEBSITE_BRIEF.md` (the brief's 3 pages plus Services, added Oct 2026). **The brief is the source of truth for copy** — read it before changing any wording, and don't add claims it doesn't make.
 
 ## Where things are
 
@@ -8,6 +8,7 @@ New 3-page site built from `CATALOGFIX_WEBSITE_BRIEF.md`. **The brief is the sou
 docs/                    ← GitHub Pages publishes this folder only (it's the "public" folder)
 ├── index.html           Home
 ├── who-we-are.html      Who We Are (jump menu: who / different / what)
+├── services.html        Services (every service in detail; see "Services page" below)
 ├── team.html            Our Team
 ├── links.html           /links: social links page for the QR code (not in the menu)
 ├── qr/                  QR codes for /links (generated; see below)
@@ -23,7 +24,7 @@ scripts/make-qr.swift    regenerates docs/qr/ (not published)
 CATALOGFIX_WEBSITE_BRIEF.md   ← brief (not published on the site)
 ```
 
-Plain HTML/CSS/JS. No build step. A page's file name is its address: GitHub Pages serves `/team` from `team.html` (query strings kept), so `links.html` is `/links`. Header, contact section and footer are repeated in each of the three main HTML files — **change all three** when editing them.
+Plain HTML/CSS/JS. No build step. A page's file name is its address: GitHub Pages serves `/team` from `team.html` (query strings kept), so `links.html` is `/links`. Header, contact section and footer are repeated in each of the four main HTML files (Home, Who We Are, Services, Our Team) — **change all four** when editing them.
 
 Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `main` branch, `/docs`).
 
@@ -37,7 +38,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 ## /links page and QR code (Oct 2026)
 
 - `links.html` = one page with every social profile, for people scanning the QR. Logo, then one button per network (rendered from `CONFIG.socials`). Not in the menu. `noindex`, with Open Graph tags pointing at catalogfix.com.
-- The **footer** of the three main pages shows the QR (`qr/qr-links.svg`, 96px) instead of social icons, linking to `links.html` ("Scan or tap to follow us").
+- The **footer** of the four main pages shows the QR (`qr/qr-links.svg`, 96px) instead of social icons, linking to `links.html` ("Scan or tap to follow us").
 - QR target: `https://catalogfix.com/links?src=qr`. It only works once catalogfix.com serves this site. `?src=qr` is only counted once an analytics tool is added (none installed yet).
 - Regenerate: `swift scripts/make-qr.swift` (Mac, no installs; edit `targetURL` at the top). It writes `docs/qr/qr-links.svg`, `qr-links.png` (1000×1000), and `qr-links-icon.*` (CF icon in the centre). It then decodes the PNGs with Apple Vision and exits non-zero if they don't match. Settings: level H, Medium Navy #223F5A on white, 4-module border.
 | `emailRot13` | ROT13 of the contact email (currently admin@catalogfix.com). Never put the plain address in HTML or meta tags |
@@ -59,7 +60,7 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 | 003 Warrior (formerly KBF Enterprises) | Supplement brand · Amazon EU · Advertising |
 - **Team** — only Carl is listed. Add each person only after they've agreed to be listed (brief §7). Copy a placeholder `<li>`, remove `is-placeholder`.
 - **"Many of us came from agencies"** — Who We Are uses the safe fallback "Our founder came from agencies." until Carl confirms (HTML comment marks the spot).
-- **Extra services** (account health & appeals, Brand Registry, category ungating, Vine) — left off "What we do" until Carl decides.
+- **Extra services** (account health & appeals, Brand Registry, category ungating, Vine): decided Oct 2026. They're on the Services page, not in the short "What we do" summary.
 
 ## Rules from the brief that are easy to break
 
@@ -74,6 +75,16 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - Comparison table: header row in Medium Navy (#223F5A) with white text, CatalogFix header cell orange with navy text (Carl's chosen 'sparing' use of navy). Rows tint on hover (mouse only). Column order: CatalogFix, Agency, Direct hire, Freelancer. Each row has a one-line description (`.cmp-desc`). Fee row wording is deliberate: Carl may renegotiate fees after big results, so never promise fees won't rise — the point is they aren't tied to sales and any change is agreed first.
 - **Process: propose copy and layout to Carl and get his OK before building or pushing changes.**
 - Buttons use Dark Navy text on orange (white on orange is too low-contrast to read comfortably).
+
+## Services page (approved by Carl, 20 Oct 2026)
+
+`services.html` exists because Amazon's Solution Provider Portal (SPP) rejected Carl's application. The website must show a **detailed description of service offerings**, **core offerings, benefits and expertise**, and **success stories with credentials and client testimonials**.
+- Every part of the service description Carl gave Amazon must stay on this page, so a reviewer can match the two: listings and catalog (creation, variations, error fixes), Amazon SEO (keyword research, listing optimization), PPC (Sponsored Products, Brands, Display), creatives (images, A+ Content, Brand Store), FBA reimbursement claims, account health, Seller Support cases, reporting.
+- Reports are **"regular"**, never "weekly" (Carl, 20 Oct 2026), here and everywhere else.
+- Seven rows: Catalog & SEO · Design & content · Advertising · Reimbursements · Account health & Seller Support · Brand Registry, ungating & Vine · Full account management (navy panel). Then "One fix, or ongoing support" (with the pricing line Carl approved) and the contact section.
+- Vine says "enrolling eligible products" only. Never "review strategy", since Amazon is strict about anything that sounds like influencing reviews.
+- Home and Who We Are keep the short "What we do" summary, linking here ("See every service in detail →").
+- Still to do for SPP (not built yet): expertise on the Team page (Carl's bio, specialists once they agree, remove the "Name to be added" placeholder cards), and 2–3 case studies with real numbers and each client's OK. Then move catalogfix.com to this site before reapplying.
 
 ## Motion (approved by Carl, Oct 2026)
 
@@ -91,7 +102,7 @@ The comparison table header stays pinned under the menu on tablet and up (styles
 
 0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
 
-1. Remove `<meta name="robots" content="noindex, nofollow">` from all three pages.
+1. Remove `<meta name="robots" content="noindex, nofollow">` from all four pages.
 2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point). Add the social links as `sameAs` in the Organization structured data. Don't add review/star-rating structured data: the five stars beside "Reviews" are decorative, not a collected rating.
 3. Add `docs/CNAME` containing `catalogfix.com`, and remove the custom domain from the `catalogfix-website` repo's Pages settings first — a domain can only be attached to one repo.
 4. Update the Google Search Console sitemap to the new pages.
