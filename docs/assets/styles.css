@@ -562,15 +562,22 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   .jump a + a::before { content: none; }
 }
 
-/* Services page: the jump links sit in their own bar at the top of the services section, so on
-   tablet and up they stay pinned under the menu until the services end (pure CSS, no script).
-   Lines above and below the links: once pinned, the top one sits exactly on the menu's bottom
-   line, so only one shows. Phones: the links wrap to four lines, too tall to pin. */
+/* Services page: the jump links sit in their own full-width bar at the top of the services
+   section, so on tablet and up they stay pinned under the menu until the services end
+   (position: sticky). Medium Navy with white links, like the comparison table's pinned header:
+   on this site, navy means "this part stays put" (Carl, 21 Oct 2026). The service you're reading
+   gets aria-current from site.js and shows white with an orange underline.
+   Phones: same colours, but not pinned (the links wrap to four lines, too tall). */
 .page-head--flush { padding-bottom: 40px; }
 .sect--jump { padding-top: 0; }
 .sect--jump > .wrap { padding-top: clamp(40px, 5vw, 64px); }
-.jump-bar { background: var(--white); }
-.jump-bar .jump { margin-top: 0; padding: 20px 0 18px; border-bottom: 1px solid var(--line); }
+.jump-bar { background: var(--navy-m); }
+.jump-bar .jump { margin-top: 0; padding: 18px 0; border-top: 0; }
+.jump-bar .jump a { color: rgba(255, 255, 255, 0.78); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.jump-bar .jump a:hover,
+.jump-bar .jump a[aria-current] { color: var(--white); text-decoration: underline; text-decoration-color: var(--orange); }
+/* inline-block keeps the underline off the dot in front of the link */
+.jump-bar .jump a + a::before { display: inline-block; color: rgba(255, 255, 255, 0.4); }
 /* Below desktop the seven links can wrap, so use spacing instead of dots (a dot would start a line) */
 @media (max-width: 1199px) {
   .jump-bar .jump { gap: 12px 26px; }
@@ -579,9 +586,9 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 @media (min-width: 761px) {
   .jump-bar { position: sticky; top: var(--head); z-index: 20; }
   /* Jump-link targets land just below the pinned bar. The html scroll-padding already clears the
-     menu (+16px); this adds the bar's height: 65px on one line, more when the links wrap
-     (--jump-h is measured by site.js). */
-  .sect--jump .sd { scroll-margin-top: calc(var(--jump-h, 65px) + 1px); }
+     menu (+16px); this adds the bar's height, measured by site.js as --jump-h (more when the
+     links wrap to two lines). */
+  .sect--jump .sd { scroll-margin-top: calc(var(--jump-h, 59px) + 1px); }
 }
 
 /* ── Who we are: story ──────────────────────── */

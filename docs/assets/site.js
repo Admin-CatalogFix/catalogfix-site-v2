@@ -90,13 +90,34 @@ var CONFIG = {
     });
   });
 
-  // Services page: jump-link targets have to clear the pinned link bar, whose height depends on
-  // whether the links fit on one line. Share its real height with the CSS as --jump-h.
+  // Services page: the pinned link bar.
   var bar = document.querySelector('.jump-bar');
   if (bar) {
+    // Jump-link targets have to clear the bar, whose height depends on whether the links fit on
+    // one line. Share its real height with the CSS as --jump-h.
     var setBarHeight = function () { document.documentElement.style.setProperty('--jump-h', bar.offsetHeight + 'px'); };
     setBarHeight();
     window.addEventListener('resize', setBarHeight);
+
+    // Highlight the service you're reading: the last one whose top has passed just under the bar.
+    // Only while the bar can pin (tablet and up); on phones it scrolls away, so there's nothing to mark.
+    var jumpLinks = Array.prototype.slice.call(bar.querySelectorAll('.jump a'));
+    var markCurrent = function () {
+      var line = bar.getBoundingClientRect().bottom + 40;
+      var current = null;
+      if (getComputedStyle(bar).position === 'sticky') {
+        jumpLinks.forEach(function (a) {
+          var target = document.querySelector(a.getAttribute('href'));
+          if (target && target.getBoundingClientRect().top <= line) { current = a; }
+        });
+      }
+      jumpLinks.forEach(function (a) {
+        if (a === current) { a.setAttribute('aria-current', 'location'); } else { a.removeAttribute('aria-current'); }
+      });
+    };
+    markCurrent();
+    window.addEventListener('scroll', markCurrent, { passive: true });
+    window.addEventListener('resize', markCurrent);
   }
 
   var toggle = document.querySelector('.nav-toggle');
