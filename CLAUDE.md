@@ -70,6 +70,8 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 - Banned words: stewardship, compounding, world-class, game-changing, cutting-edge.
 - Never say "no account manager" or "weekly" reports (say "regular"). Don't centre on Slack.
 - Carl's wording (Oct 2026): **"Not your typical agency"** replaces "not an agency". Use it only as a contrast, never as the intro. It's the eyebrow of the comparison section, whose headline is "CatalogFix is **built for the long term.**" (highlight in Deep Orange via `.hl`) and lead "A typical agency runs on a churn-driven model."
+- Menu and footer order (Carl, 21 Oct 2026): Home · Services · Who We Are · Our Team.
+- Who We Are headline breaks after the comma ("Direct expert support,<br> as part of your team."), and the "10–15" stat is kept modest (max 60px), per Carl.
 - Home section order (Oct 2026): hero → Who we work with → What we do (services; same copy as Who We Are) → How we work → comparison → reviews → contact.
 - "What we do" layout (approved by Carl, 17 Oct 2026): compact on purpose. Headline and intro side by side, the four services in one row (2 on tablet, 1 on phone), and "Full account management" as a Medium Navy bar underneath, the section's only navy. Same markup on Home and Who We Are; keep them identical.
 - Home "How we work" (approved by Carl, Oct 2026): heading "Simple from the start.", three steps **Audit / Work / Report** (the brief's steps minus "Match"), joined by a thin orange arrow line. It merges the brief with the live site's tone — don't swap in the live site's "Reach Out / We Assess / We Get to Work" copy.

@@ -599,7 +599,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   align-items: start;
 }
 .stat { padding-top: 22px; border-top: 3px solid var(--orange); }
-.stat-num { font-size: clamp(64px, 8vw, 104px); font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--navy); }
+.stat-num { font-size: clamp(44px, 4.6vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--navy); }
 .stat-cap { margin-top: 14px; max-width: 240px; font-size: 15px; line-height: 1.5; }
 .story-copy p + p { margin-top: 20px; }
 .story-copy .story-lead { font-size: clamp(20px, 2vw, 24px); line-height: 1.5; color: var(--navy); }
