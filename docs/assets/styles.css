@@ -592,20 +592,31 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 }
 
 /* ── Who we are: story ──────────────────────── */
+/* Mission sentence large on the left, the rest of the story on the right (Carl, 21 Oct 2026).
+   The old "10–15" stat was removed: on its own it read as CatalogFix's own number. */
 .story-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(40px, 7vw, 112px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px clamp(40px, 7vw, 112px);
   align-items: start;
 }
-.stat { padding-top: 22px; border-top: 3px solid var(--orange); }
-.stat-num { font-size: clamp(44px, 4.6vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--navy); }
-.stat-cap { margin-top: 14px; max-width: 240px; font-size: 15px; line-height: 1.5; }
-.story-copy p + p { margin-top: 20px; }
-.story-copy .story-lead { font-size: clamp(20px, 2vw, 24px); line-height: 1.5; color: var(--navy); }
+.story-mission {
+  padding-top: 22px;
+  border-top: 3px solid var(--orange);
+  font-size: clamp(26px, 2.8vw, 34px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.story-copy { padding-top: 25px; }
+.story-copy p + p { margin-top: 18px; }
 .story-copy p { max-width: 640px; }
 
-@media (max-width: 860px) { .story-grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) {
+  .story-grid { grid-template-columns: 1fr; }
+  .story-copy { padding-top: 0; }
+}
 
 /* ── Who we are: what changes (three points) ──
    Approved by Carl, 21 Oct 2026: three points only, each with a general "What this means for you"
