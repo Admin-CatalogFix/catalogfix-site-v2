@@ -730,7 +730,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   display: grid;
   grid-template-columns: 200px minmax(0, 1fr);
   gap: 28px clamp(32px, 5vw, 64px);
-  align-items: center;
+  align-items: start;   /* photo lines up with the name, not the middle of the bio */
   padding: clamp(32px, 4vw, 48px) 0 clamp(40px, 5vw, 56px);
   border-top: 1px solid var(--line);
 }
@@ -738,6 +738,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .founder-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; outline: 1.5px solid var(--orange); outline-offset: 5px; }
 .founder-name { font-size: clamp(28px, 3vw, 36px); margin-bottom: 6px; }
 .founder-bio { max-width: 660px; margin: 16px 0 20px; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.6; }
+.founder-bio p + p { margin-top: 12px; }
 .team {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
