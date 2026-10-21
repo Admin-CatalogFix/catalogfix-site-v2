@@ -29,12 +29,28 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="links-page">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CatalogFix home">
+      <img class="brand-icon" src="assets/logo-icon.png" alt="" width="70" height="38">
+      <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="98" height="26">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="who-we-are.html">Who We Are</a>
+      <a href="team.html">Our Team</a>
+      <a class="btn" href="#contact" data-audit>Get a free audit</a>
+    </nav>
+  </div>
+</header>
 
 <main class="links" id="main">
-  <a class="links-brand" href="index.html" aria-label="CatalogFix home">
-    <img class="brand-icon" src="assets/logo-icon.png" alt="" width="89" height="48">
-    <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="121" height="32">
-  </a>
   <h1 class="links-title">Follow CatalogFix</h1>
   <p class="links-lead">Amazon &amp; Walmart experts, built into your team.</p>
 
@@ -52,9 +68,24 @@
       <li><a class="links-btn" href="https://x.com/catalogfix"><span>X</span></a></li>
     </ul>
   </noscript>
-
-  <p class="links-foot"><a class="link" href="index.html">catalogfix.com</a></p>
 </main>
+
+<!-- Same footer as the main pages, minus the QR code (it points to this page). -->
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CatalogFix home">
+      <img class="brand-icon" src="assets/logo-icon.png" alt="" width="56" height="30">
+      <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="75" height="20">
+    </a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="who-we-are.html">Who We Are</a>
+      <a href="team.html">Our Team</a>
+    </nav>
+    <p class="foot-legal">&copy; <span data-year>2026</span> CatalogFix · <a href="values.html" target="_blank" rel="noopener">Our values</a> · <a href="privacy.html" target="_blank" rel="noopener">Privacy policy</a></p>
+  </div>
+</footer>
 
 <script src="assets/site.js"></script>
 </body>

@@ -821,24 +821,24 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .doc--legal li + li { margin-top: 6px; }
 .doc-updated { margin: calc(-1 * clamp(16px, 2vw, 24px)) 0 28px; font-size: 15px; color: var(--muted); }
 .doc-foot { padding: 28px 0; border-top: 1px solid var(--line); font-size: 14px; }
-.doc-foot a { color: var(--navy); }
 /* Footer of the main pages: values + privacy links next to the copyright */
-.foot-legal a { color: inherit; text-decoration: none; }
-.foot-legal a:hover { color: var(--navy); text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 4px; }
+/* Values and Privacy links: navy and underlined so they read as links (Carl, 21 Oct 2026) */
+.foot-legal a,
+.doc-foot a { color: var(--navy); font-weight: 500; text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 4px; }
+.foot-legal a:hover,
+.doc-foot a:hover { text-decoration-color: var(--navy); }
 
 /* ── Links page (/links): QR landing page, mobile first ── */
 .links-page { background: var(--soft); }
+/* Same header and footer as the main pages (Carl, 21 Oct 2026); the buttons sit in a narrow column between */
 .links {
   display: flex;
   flex-direction: column;
   max-width: 440px;
-  min-height: 100vh;
   margin: 0 auto;
-  padding: 48px 20px 36px;
+  padding: 48px 20px 64px;
 }
-.links-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 28px; text-decoration: none; }
-.links-brand .brand-icon { height: 48px; }
-.links-brand .brand-word { height: 32px; }
+.links-page .site-foot { background: var(--white); }
 .links-title { font-size: 26px; text-align: center; margin-bottom: 8px; }
 .links-lead { font-size: 16px; text-align: center; margin-bottom: 28px; text-wrap: balance; }
 .links-list { display: flex; flex-direction: column; gap: 12px; }
@@ -878,4 +878,3 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   border-right: 1.5px solid var(--orange);
   transform: rotate(45deg);
 }
-.links-foot { margin-top: auto; padding-top: 32px; font-size: 14px; text-align: center; }

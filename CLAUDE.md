@@ -40,7 +40,8 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 ## /links page and QR code (Oct 2026)
 
-- `links.html` = one page with every social profile, for people scanning the QR. Logo, then one button per network (rendered from `CONFIG.socials`). Not in the menu. `noindex`, with Open Graph tags pointing at catalogfix.com.
+- `links.html` = one page with every social profile, for people scanning the QR. It has the same header and footer as the main pages (Carl, 21 Oct 2026; the footer leaves out the QR, which would point to this page), then one button per network (rendered from `CONFIG.socials`). Not in the menu. `noindex`, with Open Graph tags pointing at catalogfix.com.
+- The footer's "Our values" and "Privacy policy" links are navy with an orange underline, so they read as links (Carl, 21 Oct 2026).
 - The **footer** of the four main pages shows the QR (`qr/qr-links.svg`, 96px) instead of social icons, linking to `links.html` ("Scan or tap to follow us").
 - QR target: `https://catalogfix.com/links?src=qr`. It only works once catalogfix.com serves this site. `?src=qr` is only counted once an analytics tool is added (none installed yet).
 - Regenerate: `swift scripts/make-qr.swift` (Mac, no installs; edit `targetURL` at the top). It writes `docs/qr/qr-links.svg`, `qr-links.png` (1000×1000), and `qr-links-icon.*` (CF icon in the centre). It then decodes the PNGs with Apple Vision and exits non-zero if they don't match. Settings: level H, Medium Navy #223F5A on white, 4-module border.
