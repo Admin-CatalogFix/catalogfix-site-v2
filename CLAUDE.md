@@ -11,6 +11,8 @@ docs/                    ← GitHub Pages publishes this folder only (it's the "
 ├── services.html        Services (every service in detail; see "Services page" below)
 ├── team.html            Our Team
 ├── links.html           /links: social links page for the QR code (not in the menu)
+├── values.html          /values: mission, vision, core values (footer link, opens in a new tab)
+├── privacy.html         /privacy: privacy policy (footer link, opens in a new tab)
 ├── qr/                  QR codes for /links (generated; see below)
 ├── .nojekyll
 └── assets/
@@ -106,11 +108,18 @@ All three pages load `assets/motion.css` + `assets/motion.js`, plus a one-line h
 
 The comparison table header stays pinned under the menu on tablet and up (styles.css). It needs no ancestor with `overflow: hidden`.
 
+## Our values and Privacy policy (21 Oct 2026)
+
+- Carl wanted mission, vision and values kept off the main pages but still available, so they live on a standalone page, `values.html`. Both it and `privacy.html` are linked from the footer of the four main pages ("© CatalogFix · Our values · Privacy policy") and open in a new tab. They use a simple text layout (`.doc-*` styles): logo back to the site, one 760px column, no menu.
+- Mission matches the first line of Who We Are. Vision and the five values (Ownership, No layers, Get to the root, Straight talk, Fair to both sides) were drafted from Carl's own wording and approved by him.
+- **Keep the privacy policy true to what the site actually does.** It lists the audit form's fields (name, email, WhatsApp, brand, marketplaces, product, issue, details, who handles Amazon), email and Google Calendar bookings, Jotform and Google Workspace as processors, and no cookies, analytics or tracking. If any of those change (a form field, a new tool, analytics added), update the policy and its "Last updated" date in the same change.
+- Carl's choices: business name is just "CatalogFix", based in Iloilo. No mailing list or marketing emails. Audit requests and emails are kept on file with no deletion schedule, and deleted on request. Requests are answered within 30 days. The Philippine Data Privacy Act / GDPR line was drafted by Claude, **not reviewed by a lawyer**. Carl knows and accepted the draft.
+
 ## Before moving catalogfix.com to this site (only when Carl approves)
 
 0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
 
-1. Remove `<meta name="robots" content="noindex, nofollow">` from all four pages.
+1. Remove `<meta name="robots" content="noindex, nofollow">` from all six pages (the four main pages, plus values and privacy).
 2. Add canonical URLs, Open Graph tags, a `sitemap.xml` and `robots.txt` in `docs/` (the old site's versions are a good starting point). Add the social links as `sameAs` in the Organization structured data. Don't add review/star-rating structured data: the five stars beside "Reviews" are decorative, not a collected rating.
 3. Add `docs/CNAME` containing `catalogfix.com`, and remove the custom domain from the `catalogfix-website` repo's Pages settings first — a domain can only be attached to one repo.
 4. Update the Google Search Console sitemap to the new pages.
