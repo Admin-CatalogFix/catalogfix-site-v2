@@ -15,15 +15,25 @@
 <body class="doc-page">
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- Standalone page, opened in a new tab from the footer. Logo leads back to the site.
+<!-- Opened in a new tab from the footer.
      Keep this page true to what the site and audit form actually collect; update it (and the
      date) whenever the form, the tools behind it, or the site's tracking change. -->
-<header class="doc-head">
-  <div class="wrap doc-wrap">
+<header class="site-head">
+  <div class="wrap">
     <a class="brand" href="index.html" aria-label="CatalogFix home">
       <img class="brand-icon" src="assets/logo-icon.png" alt="" width="70" height="38">
       <img class="brand-word" src="assets/logo-wordmark.png" alt="CatalogFix" width="98" height="26">
     </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="who-we-are.html">Who We Are</a>
+      <a href="team.html">Our Team</a>
+      <a class="btn" href="#contact" data-audit>Get a free audit</a>
+    </nav>
   </div>
 </header>
 
