@@ -562,6 +562,28 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   .jump a + a::before { content: none; }
 }
 
+/* Services page: the jump links sit in their own bar at the top of the services section, so on
+   tablet and up they stay pinned under the menu until the services end (pure CSS, no script).
+   Lines above and below the links: once pinned, the top one sits exactly on the menu's bottom
+   line, so only one shows. Phones: the links wrap to four lines, too tall to pin. */
+.page-head--flush { padding-bottom: 40px; }
+.sect--jump { padding-top: 0; }
+.sect--jump > .wrap { padding-top: clamp(40px, 5vw, 64px); }
+.jump-bar { background: var(--white); }
+.jump-bar .jump { margin-top: 0; padding: 20px 0 18px; border-bottom: 1px solid var(--line); }
+/* Below desktop the seven links can wrap, so use spacing instead of dots (a dot would start a line) */
+@media (max-width: 1199px) {
+  .jump-bar .jump { gap: 12px 26px; }
+  .jump-bar .jump a + a::before { content: none; }
+}
+@media (min-width: 761px) {
+  .jump-bar { position: sticky; top: var(--head); z-index: 20; }
+  /* Jump-link targets land just below the pinned bar. The html scroll-padding already clears the
+     menu (+16px); this adds the bar's height: 65px on one line, more when the links wrap
+     (--jump-h is measured by site.js). */
+  .sect--jump .sd { scroll-margin-top: calc(var(--jump-h, 65px) + 1px); }
+}
+
 /* ── Who we are: story ──────────────────────── */
 .story-grid {
   display: grid;
@@ -666,7 +688,6 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   gap: 20px clamp(40px, 6vw, 96px);
   padding: clamp(36px, 4.5vw, 52px) 0;
   border-top: 1px solid var(--line);
-  scroll-margin-top: calc(var(--head) + 12px);
 }
 .sd::before { content: ""; position: absolute; top: -1px; left: 0; width: 48px; height: 2px; background: var(--orange); }
 .sd h2 { font-size: clamp(26px, 2.8vw, 34px); margin-bottom: 12px; }

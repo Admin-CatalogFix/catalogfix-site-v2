@@ -90,6 +90,15 @@ var CONFIG = {
     });
   });
 
+  // Services page: jump-link targets have to clear the pinned link bar, whose height depends on
+  // whether the links fit on one line. Share its real height with the CSS as --jump-h.
+  var bar = document.querySelector('.jump-bar');
+  if (bar) {
+    var setBarHeight = function () { document.documentElement.style.setProperty('--jump-h', bar.offsetHeight + 'px'); };
+    setBarHeight();
+    window.addEventListener('resize', setBarHeight);
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
   if (toggle && nav) {

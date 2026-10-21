@@ -39,24 +39,30 @@
 <main id="main">
 
   <!-- Before changing any service wording, read "Services page" in CLAUDE.md -->
-  <section class="page-head" aria-labelledby="svc-page-h">
+  <section class="page-head page-head--flush" aria-labelledby="svc-page-h">
     <div class="wrap">
       <span class="eyebrow">Our services</span>
       <h1 id="svc-page-h">What we do, in detail.</h1>
       <p class="lead">For Amazon and Walmart. Pick one service or several, and each one is handled by a specialist in that area. Here's what each one covers.</p>
-      <nav class="jump" aria-label="On this page">
-        <a href="#catalog">Catalog &amp; SEO</a>
-        <a href="#design">Design &amp; content</a>
-        <a href="#advertising">Advertising</a>
-        <a href="#reimbursements">Reimbursements</a>
-        <a href="#account-health">Account health</a>
-        <a href="#brand">Brand Registry &amp; Vine</a>
-        <a href="#full">Full account management</a>
-      </nav>
     </div>
   </section>
 
-  <section class="sect sect--tight-top" aria-label="Services">
+  <section class="sect sect--jump" aria-label="Services">
+    <!-- Jump links stay pinned under the menu while you scroll the services (tablet and up).
+         They live inside this section so they let go once the services end. -->
+    <div class="jump-bar">
+      <div class="wrap">
+        <nav class="jump" aria-label="On this page">
+          <a href="#catalog">Catalog &amp; SEO</a>
+          <a href="#design">Design &amp; content</a>
+          <a href="#advertising">Advertising</a>
+          <a href="#reimbursements">Reimbursements</a>
+          <a href="#account-health">Account health</a>
+          <a href="#brand">Brand Registry &amp; Vine</a>
+          <a href="#full">Full account management</a>
+        </nav>
+      </div>
+    </div>
     <div class="wrap">
 
       <article class="sd" id="catalog" aria-labelledby="catalog-h">
