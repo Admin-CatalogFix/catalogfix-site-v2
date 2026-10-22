@@ -49,7 +49,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 ## Placeholders still on the pages (brief §9 open items)
 
-- **Reviews** — three real, client-approved quotes on Home: Jens Vogel (Wildfang, the full-width lead), Joe Woody (Wickers), Max N. (Amazon International Manager, Warrior; from his LinkedIn recommendation). Roles: Jens = Managing Director, Joe = Owner. Keep quotes **word for word** — never edit, trim or write review text without the client's OK. Logos live in `docs/assets/clients/`, trimmed from Carl's "Client logo" folder with a stdlib PNG trimmer (no PIL on Carl's Mac), resized to 120px tall.
+- **Reviews** — three real, client-approved quotes on Home: Jens Vogel (Wildfang, the full-width lead), Joe Woody (Wickers), Max N. (Amazon International Manager, Warrior; from his LinkedIn recommendation). Roles: Jens = Managing Director, Joe = Owner. Keep quotes **word for word** — never edit, trim or write review text without the client's OK. Logos live in `docs/assets/clients/`, trimmed from Carl's originals (now in the parent folder's `assets/client-logos-original/`) with a stdlib PNG trimmer (no PIL on Carl's Mac), resized to 120px tall.
 
 ## "Who we work with" (Home and Who We Are)
 
