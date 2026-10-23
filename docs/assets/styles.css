@@ -205,7 +205,7 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 }
 
 /* ── Who we work with ───────────────────────── */
-/* Clients are described by category, marketplace and service — no names or logos. */
+/* Each client: logo (only with the brand's OK), then category, marketplaces and service. */
 .clients { padding: 40px 0 44px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .clients-label {
   margin-bottom: 24px;
@@ -216,7 +216,8 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   text-transform: uppercase;
   color: var(--muted);
 }
-.clients-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px 32px; }
+/* One column per client up to five (3 while Duke and Livingood await approval, 5 once they're back) */
+.clients-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px 32px; }
 .clients-list li {
   position: relative;
   display: flex;
@@ -820,6 +821,9 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
 .doc--legal ul { padding-left: 1.2em; list-style: disc; }
 .doc--legal li + li { margin-top: 6px; }
 .doc-updated { margin: calc(-1 * clamp(16px, 2vw, 24px)) 0 28px; font-size: 15px; color: var(--muted); }
+/* 404 page: one orange button back home (buttons inside text pages stay un-underlined) */
+.doc .btn { text-decoration: none; }
+.doc-404-actions { margin-top: 32px; }
 .doc-foot { padding: 28px 0; border-top: 1px solid var(--line); font-size: 14px; }
 /* Footer of the main pages: values + privacy links next to the copyright */
 /* Values and Privacy links: navy and underlined so they read as links (Carl, 21 Oct 2026) */
