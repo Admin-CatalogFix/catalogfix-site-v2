@@ -29,7 +29,7 @@ CATALOGFIX_WEBSITE_BRIEF.md   ← brief (not published on the site)
 
 Plain HTML/CSS/JS. No build step. A page's file name is its address: GitHub Pages serves `/team` from `team.html` (query strings kept), so `links.html` is `/links`. Header, contact section and footer are repeated in each of the four main HTML files (Home, Who We Are, Services, Our Team) — **change all four** when editing them.
 
-Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `main` branch, `/docs`).
+**Live on https://catalogfix.com since 23 Oct 2026** (Pages source: `main` branch, `/docs`; custom domain via `docs/CNAME`, HTTPS enforced). The old preview address admin-catalogfix.github.io/catalogfix-site-v2/ now redirects to catalogfix.com, so **every push goes straight to the live site**.
 
 ## Things to fill in — `docs/assets/site.js` CONFIG
 
@@ -53,7 +53,7 @@ Preview: https://admin-catalogfix.github.io/catalogfix-site-v2/ (Pages source: `
 
 ## "Who we work with" (Home and Who We Are)
 
-Each client shows its **logo** above category · marketplaces · service (Carl, Oct 2026). Carl is sending the preview to every brand for approval before the site goes live — **Duke and Livingood had not approved logo use as of 13 Oct 2026**; remove a logo if a brand says no. Keep both pages' lists identical.
+Each client shows its **logo** above category · marketplaces · service (Carl, Oct 2026). Keep both pages' lists identical. **Duke and Livingood are off the site (23 Oct 2026) until each approves logo use.** Their cards and logos are saved outside the repo in `Website/assets/pending-client-logos/` (`cards.html` has the exact `<li>` for each, plus the order). To restore one when Carl says it's approved: copy its PNG back into `docs/assets/clients/` and paste its `<li>` into "Who we work with" on **both** Home and Who We Are. The row adapts to 3–5 brands by itself (`auto-fit` grid).
 
 | Client (internal only) | On the site |
 |---|---|
@@ -117,7 +117,11 @@ The comparison table header stays pinned under the menu on tablet and up (styles
 - **Keep the privacy policy true to what the site actually does.** It lists the audit form's fields (name, email, WhatsApp, brand, marketplaces, product, issue, details, who handles Amazon), email and Google Calendar bookings, Jotform and Google Workspace as processors, and no cookies, analytics or tracking. If any of those change (a form field, a new tool, analytics added), update the policy and its "Last updated" date in the same change.
 - Carl's choices: business name is just "CatalogFix", based in Iloilo. No mailing list or marketing emails. Audit requests and emails are kept on file with no deletion schedule, and deleted on request. Requests are answered within 30 days. The Philippine Data Privacy Act / GDPR line was drafted by Claude, **not reviewed by a lawyer**. Carl knows and accepted the draft.
 
-## Before moving catalogfix.com to this site (only when Carl approves)
+## Launch (done 23 Oct 2026)
+
+The launch checklist below was done on 23 Oct 2026, except steps 4 and 5. Note that catalogfix.com was already down that day ("Site not found"): Pages had been switched off on the old repo (now shown on GitHub as `Admin-CatalogFix/CatalogFix-Website`), so the domain moved straight to this repo. The six main pages are indexable, `/links` and the 404 page are not. There's business info (ProfessionalService + `sameAs` socials) on Home, plus `sitemap.xml`, `robots.txt` and `404.html` (root-relative links, because GitHub Pages serves it at any depth). **Still open: step 4 (Search Console sitemap) and step 5 (Jotform thank-you link to /links).**
+
+### Original checklist
 
 0. Confirm every brand in "Who we work with" and the reviews has approved its logo and wording.
 
