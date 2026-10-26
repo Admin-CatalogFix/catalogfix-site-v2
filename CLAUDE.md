@@ -22,6 +22,7 @@ docs/                    ← GitHub Pages publishes this folder only (it's the "
     ├── og-image.jpg     1200×630 share image (copied from the live site repo)
     ├── team/            team photos, 320×320 JPEG
     ├── logo-icon.png, logo-wordmark.png   (copied from the live site repo)
+    ├── icon.png, logo.png   EMAIL LOGOS: same images, old names. Do not rename, move or delete (see below)
     └── favicon.png, apple-touch-icon.png
 scripts/make-qr.swift    regenerates docs/qr/ (not published)
 CATALOGFIX_WEBSITE_BRIEF.md   ← brief (not published on the site)
@@ -30,6 +31,12 @@ CATALOGFIX_WEBSITE_BRIEF.md   ← brief (not published on the site)
 Plain HTML/CSS/JS. No build step. A page's file name is its address: GitHub Pages serves `/team` from `team.html` (query strings kept), so `links.html` is `/links`. Header, contact section and footer are repeated in each of the four main HTML files (Home, Who We Are, Services, Our Team) — **change all four** when editing them.
 
 **Live on https://catalogfix.com since 23 Oct 2026** (Pages source: `main` branch, `/docs`; custom domain via `docs/CNAME`, HTTPS enforced). The old preview address admin-catalogfix.github.io/catalogfix-site-v2/ now redirects to catalogfix.com, so **every push goes straight to the live site**.
+
+## Email logos: never rename, move or delete
+
+`docs/assets/icon.png` and `docs/assets/logo.png` are the logos in every Friday client report email (the Friday-Reporting repo, `email/report-email.html`). The emails load them from `https://catalogfix.com/assets/icon.png` and `/assets/logo.png` each time someone opens one, including emails sent weeks ago. If either address stops working, every report a client has ever received shows a broken image.
+
+They are the same images as `logo-icon.png` and `logo-wordmark.png`. The site uses those; the emails use these. The launch on 23 Oct 2026 dropped the old names and broke the logos in every sent report until they were restored on 26 Oct 2026. To change the logo, replace these files in place and keep the names. Before moving the domain or rebuilding the site, check both addresses still load.
 
 ## Things to fill in — `docs/assets/site.js` CONFIG
 
