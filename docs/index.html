@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CatalogFix | Amazon &amp; Walmart experts, built into your team</title>
+  <title>CatalogFix | Amazon &amp; Walmart Agency for Catalog, SEO and Ads</title>
   <meta name="description" content="Amazon and Walmart specialists who work as part of your team. Skip the hiring and training. Get a free audit.">
   <link rel="canonical" href="https://catalogfix.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CatalogFix">
-  <meta property="og:title" content="CatalogFix | Amazon &amp; Walmart experts, built into your team">
+  <meta property="og:title" content="CatalogFix | Amazon &amp; Walmart Agency for Catalog, SEO and Ads">
   <meta property="og:description" content="Amazon and Walmart specialists who work as part of your team. Skip the hiring and training. Get a free audit.">
   <meta property="og:url" content="https://catalogfix.com/">
   <meta property="og:image" content="https://catalogfix.com/assets/og-image.jpg">
@@ -16,51 +16,85 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CatalogFix">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CatalogFix | Amazon &amp; Walmart experts, built into your team">
+  <meta name="twitter:title" content="CatalogFix | Amazon &amp; Walmart Agency for Catalog, SEO and Ads">
   <meta name="twitter:description" content="Amazon and Walmart specialists who work as part of your team. Skip the hiring and training. Get a free audit.">
   <meta name="twitter:image" content="https://catalogfix.com/assets/og-image.jpg">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "CatalogFix",
-  "url": "https://catalogfix.com/",
-  "logo": "https://catalogfix.com/assets/apple-touch-icon.png",
-  "image": "https://catalogfix.com/assets/og-image.jpg",
-  "description": "Amazon and Walmart specialists who work as part of your team: catalog and SEO, images and A+ Content, PPC, FBA reimbursements and account health.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Iloilo",
-    "addressCountry": "PH"
-  },
-  "areaServed": [
-    "US",
-    "CA",
-    "GB",
-    "EU",
-    "AU",
-    "JP"
-  ],
-  "knowsAbout": [
-    "Amazon catalog management",
-    "Amazon SEO",
-    "Amazon PPC",
-    "A+ Content",
-    "Amazon Brand Store",
-    "FBA reimbursements",
-    "Amazon account health",
-    "Brand Registry",
-    "Walmart Marketplace",
-    "Walmart Connect"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/company/catalogfix",
-    "https://www.facebook.com/catalogfix/",
-    "https://www.instagram.com/catalogfix",
-    "https://www.threads.com/@catalogfix",
-    "https://www.tiktok.com/@catalogfix",
-    "https://www.youtube.com/@catalogfix",
-    "https://x.com/catalogfix"
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://catalogfix.com/#org",
+      "name": "CatalogFix",
+      "legalName": "CatalogFix Management Consultancy Services",
+      "url": "https://catalogfix.com/",
+      "logo": "https://catalogfix.com/assets/apple-touch-icon.png",
+      "image": "https://catalogfix.com/assets/og-image.jpg",
+      "description": "Amazon and Walmart agency: catalog and SEO, product images and A+ Content, advertising, FBA reimbursements, account health and full account management.",
+      "founder": {
+        "@type": "Person",
+        "name": "Carl Labios",
+        "jobTitle": "Founder & Account Director",
+        "url": "https://catalogfix.com/team"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Iloilo City",
+        "addressCountry": "PH"
+      },
+      "areaServed": [
+        "US",
+        "CA",
+        "GB",
+        "IE",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "PL",
+        "SE",
+        "AU",
+        "JP"
+      ],
+      "knowsAbout": [
+        "Amazon catalog management",
+        "Amazon SEO",
+        "Amazon PPC",
+        "Amazon Ads",
+        "A+ Content",
+        "Amazon Brand Store",
+        "FBA reimbursements",
+        "Amazon account health",
+        "Brand Registry",
+        "Walmart Marketplace",
+        "Walmart Connect"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/catalogfix",
+        "https://www.facebook.com/catalogfix/",
+        "https://www.instagram.com/catalogfix",
+        "https://www.threads.com/@catalogfix",
+        "https://www.tiktok.com/@catalogfix",
+        "https://www.youtube.com/@catalogfix",
+        "https://x.com/catalogfix"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://catalogfix.com/#website",
+      "name": "CatalogFix",
+      "url": "https://catalogfix.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://catalogfix.com/#org"
+      }
+    }
   ]
 }
   </script>
@@ -85,7 +119,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-drop">
+        <a href="services.html">Services</a>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="svc-menu"><span class="sr-only">Show all services</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-menu" id="svc-menu">
+          <li><a href="catalog-seo.html">Catalog &amp; SEO</a></li>
+          <li><a href="design-content.html">Design &amp; content</a></li>
+          <li><a href="advertising.html">Advertising</a></li>
+          <li><a href="full-account-management.html">Full account management</a></li>
+        </ul>
+      </div>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
       <a class="btn" href="#contact" data-audit>Get a free audit</a>
@@ -240,10 +284,9 @@
         </div>
         <div>
           <p>For Amazon and Walmart. Pick one service or several, and each one is handled by a specialist in that area.</p>
-          <p class="svc-more"><a class="link" href="services.html">See every service in detail →</a></p>
         </div>
       </div>
-      <!-- Four services in a row; full account management is the navy bar beneath them -->
+      <!-- Three main services in a row; full account management is the navy bar beneath them -->
       <dl class="services">
         <div class="svc">
           <dt>Catalog &amp; SEO</dt>
@@ -255,18 +298,17 @@
         </div>
         <div class="svc">
           <dt>Advertising</dt>
-          <dd>Amazon PPC, Walmart Connect.</dd>
-        </div>
-        <div class="svc">
-          <dt>Reimbursements</dt>
-          <dd>Lost and damaged inventory claims.</dd>
+          <dd>Amazon Ads (Sponsored Products, Brands and Display) and Walmart Connect.</dd>
         </div>
         <div class="svc svc--all">
           <dt>Full account management</dt>
           <dd>Everything above, handled together.</dd>
         </div>
       </dl>
-      <p class="markets">We cover every Amazon marketplace, including the US, CA, UK, EU, AU, and JP.</p>
+      <div class="markets-row">
+        <p class="markets">We cover every Amazon marketplace, including the US, CA, UK, EU, AU, and JP.</p>
+        <a class="link" href="services.html">See every service in detail →</a>
+      </div>
     </div>
   </section>
 
@@ -314,7 +356,7 @@
               <th scope="col" class="us">CatalogFix</th>
               <th scope="col">Agency</th>
               <th scope="col">Direct hire</th>
-              <th scope="col">Freelancer</th>
+              <th scope="col">Single freelancer</th>
             </tr>
           </thead>
           <tbody>
@@ -441,28 +483,21 @@
     </div>
   </section>
 
-  <!-- Contact (same block on every page) -->
-  <section class="contact sect" id="contact" aria-labelledby="contact-h">
-    <svg class="contact-swoosh" viewBox="0 0 620 260" aria-hidden="true">
-      <path class="swoosh-line" pathLength="1" d="M0 230 C 170 230, 220 60, 390 60 L 600 60" fill="none" stroke="#E88130" stroke-width="1.5" stroke-linecap="round"/>
-      <path class="swoosh-head" d="M586 48 L600 60 L586 72" fill="none" stroke="#E88130" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div class="wrap contact-grid">
+  <!-- Slim audit band (same on every page). Home also has the Follow row under it. -->
+  <section class="cta-band" id="contact" aria-labelledby="cta-h">
+    <div class="wrap cta-band-inner">
       <div>
-        <span class="eyebrow">Contact</span>
-        <h2 id="contact-h">Tell us what's going on with your catalog.</h2>
-        <div class="contact-actions">
-          <a class="btn" href="#contact" data-audit>
-            Get a free audit
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="link email-link" href="#contact" data-email>Or email us directly</a>
-        </div>
+        <h2 id="cta-h">Want us to look at your account?</h2>
+        <p>Start with a free audit. We&rsquo;ll show you what&rsquo;s holding it back.</p>
       </div>
-      <div class="socials">
-        <p class="socials-label">Follow us</p>
-        <ul class="social-links" data-socials aria-label="CatalogFix on social media"></ul>
-      </div>
+      <a class="btn" href="#contact" data-audit>Get a free audit <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+  <section class="follow-row" aria-labelledby="follow-h">
+    <div class="wrap follow-row-inner">
+      <h2 id="follow-h">Follow CatalogFix</h2>
+      <ul class="social-links" data-socials aria-label="CatalogFix on social media"></ul>
     </div>
   </section>
 
@@ -477,6 +512,8 @@
     <nav class="foot-nav" aria-label="Footer">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="advertising.html">Advertising</a>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
     </nav>
@@ -484,6 +521,7 @@
       <img src="qr/qr-links.svg" alt="QR code to the CatalogFix social links page" width="96" height="96">
       <span>Scan or tap to follow us</span>
     </a>
+    <p class="foot-legal">CatalogFix is the trading name of CatalogFix Management Consultancy Services, Iloilo City, Philippines · DTI Business Name No. 7889874</p>
     <p class="foot-legal">&copy; <span data-year>2026</span> CatalogFix · <a href="values.html" target="_blank" rel="noopener">Our values</a> · <a href="privacy.html" target="_blank" rel="noopener">Privacy policy</a></p>
   </div>
 </footer>

@@ -25,6 +25,42 @@
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/motion.css">
   <script>if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('motion-ready'); }</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Who We Are",
+      "description": "A team of Amazon and Walmart specialists giving sellers direct expert support, with no agency layers in between.",
+      "url": "https://catalogfix.com/who-we-are",
+      "isPartOf": {
+        "@id": "https://catalogfix.com/#website"
+      },
+      "publisher": {
+        "@id": "https://catalogfix.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://catalogfix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Who We Are",
+          "item": "https://catalogfix.com/who-we-are"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -40,7 +76,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-drop">
+        <a href="services.html">Services</a>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="svc-menu"><span class="sr-only">Show all services</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-menu" id="svc-menu">
+          <li><a href="catalog-seo.html">Catalog &amp; SEO</a></li>
+          <li><a href="design-content.html">Design &amp; content</a></li>
+          <li><a href="advertising.html">Advertising</a></li>
+          <li><a href="full-account-management.html">Full account management</a></li>
+        </ul>
+      </div>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html" aria-current="page">Who We Are</a>
       <a href="team.html">Our Team</a>
       <a class="btn" href="#contact" data-audit>Get a free audit</a>
@@ -120,11 +166,10 @@
         </div>
         <div>
           <p>For Amazon and Walmart. Pick one service or several, and each one is handled by a specialist in that area.</p>
-          <p class="svc-more"><a class="link" href="services.html">See every service in detail →</a></p>
         </div>
       </div>
-      <!-- Four services in a row; full account management is the navy bar beneath them.
-           Short summary only: the full list, incl. account health, Brand Registry, ungating and Vine, is on services.html. -->
+      <!-- Three main services in a row; full account management is the navy bar beneath them.
+           Short summary only: the full list, incl. reimbursements and account health, is on services.html. -->
       <dl class="services">
         <div class="svc">
           <dt>Catalog &amp; SEO</dt>
@@ -136,18 +181,17 @@
         </div>
         <div class="svc">
           <dt>Advertising</dt>
-          <dd>Amazon PPC, Walmart Connect.</dd>
-        </div>
-        <div class="svc">
-          <dt>Reimbursements</dt>
-          <dd>Lost and damaged inventory claims.</dd>
+          <dd>Amazon Ads (Sponsored Products, Brands and Display) and Walmart Connect.</dd>
         </div>
         <div class="svc svc--all">
           <dt>Full account management</dt>
           <dd>Everything above, handled together.</dd>
         </div>
       </dl>
-      <p class="markets">We cover every Amazon marketplace, including the US, CA, UK, EU, AU, and JP.</p>
+      <div class="markets-row">
+        <p class="markets">We cover every Amazon marketplace, including the US, CA, UK, EU, AU, and JP.</p>
+        <a class="link" href="services.html">See every service in detail →</a>
+      </div>
     </div>
   </section>
 
@@ -214,6 +258,8 @@
     <nav class="foot-nav" aria-label="Footer">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="advertising.html">Advertising</a>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
     </nav>
@@ -221,6 +267,7 @@
       <img src="qr/qr-links.svg" alt="QR code to the CatalogFix social links page" width="96" height="96">
       <span>Scan or tap to follow us</span>
     </a>
+    <p class="foot-legal">CatalogFix is the trading name of CatalogFix Management Consultancy Services, Iloilo City, Philippines · DTI Business Name No. 7889874</p>
     <p class="foot-legal">&copy; <span data-year>2026</span> CatalogFix · <a href="values.html" target="_blank" rel="noopener">Our values</a> · <a href="privacy.html" target="_blank" rel="noopener">Privacy policy</a></p>
   </div>
 </footer>

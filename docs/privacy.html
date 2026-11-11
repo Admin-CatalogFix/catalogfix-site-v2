@@ -23,6 +23,42 @@
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Privacy Policy",
+      "description": "How CatalogFix collects, uses and protects the information you share through our website, audit form, email and call bookings.",
+      "url": "https://catalogfix.com/privacy",
+      "isPartOf": {
+        "@id": "https://catalogfix.com/#website"
+      },
+      "publisher": {
+        "@id": "https://catalogfix.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://catalogfix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://catalogfix.com/privacy"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body class="doc-page">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -41,7 +77,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-drop">
+        <a href="services.html">Services</a>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="svc-menu"><span class="sr-only">Show all services</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-menu" id="svc-menu">
+          <li><a href="catalog-seo.html">Catalog &amp; SEO</a></li>
+          <li><a href="design-content.html">Design &amp; content</a></li>
+          <li><a href="advertising.html">Advertising</a></li>
+          <li><a href="full-account-management.html">Full account management</a></li>
+        </ul>
+      </div>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
       <a class="btn" href="#contact" data-audit>Get a free audit</a>
@@ -53,12 +99,12 @@
   <div class="wrap doc-wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy policy.</h1>
-    <p class="doc-updated">Last updated: 21 October 2026</p>
+    <p class="doc-updated">Last updated: 28 October 2026</p>
 
     <p>This policy explains what information CatalogFix collects through this website, how we use it, and the choices you have. We've kept it short and in plain English.</p>
 
     <h2>Who we are</h2>
-    <p>CatalogFix is based in Iloilo, the Philippines. If you have any questions about your information, <a href="#contact" data-email>email us</a>.</p>
+    <p>CatalogFix is the trading name of CatalogFix Management Consultancy Services, a business registered in the Philippines (DTI Business Name No. 7889874) and based in Iloilo City. If you have any questions about your information, <a href="#contact" data-email>email us</a>.</p>
 
     <h2>What we collect</h2>
     <p><strong>When you request a free audit,</strong> our form asks for:</p>
@@ -85,7 +131,23 @@
       <li><strong>Jotform</strong>, for our audit form</li>
       <li><strong>Google Workspace</strong>, for email, call bookings and the spreadsheets we keep audit requests in</li>
     </ul>
-    <p>If you become a client and give us access to Seller Central or other accounts, how we handle that data is covered in our agreement with you.</p>
+
+    <h2>Client accounts and Amazon data</h2>
+    <p>If you become a client, you may give us access to your Seller Central, Amazon Ads, Walmart or other accounts. Here's how we handle that access and the data in it:</p>
+    <ul>
+      <li>We only use it to provide the services you've asked for.</li>
+      <li>We only get the access you choose to give us, and you can remove it at any time.</li>
+      <li>Everyone on our team uses their own login with 2-step verification. We never share logins.</li>
+      <li>Passwords are kept in an encrypted password manager.</li>
+      <li>We don't download or keep your customers' personal information, such as names, addresses or phone numbers. If we ever receive it for a task, we delete it within 30 days.</li>
+      <li>Everyone on our team is bound by confidentiality, and we remove a person's access the same day they stop working on your account.</li>
+      <li>Files we create for you are kept in your own Google Drive or in our access-controlled shared drive.</li>
+    </ul>
+    <p>Anything else about your account data is covered in our agreement with you.</p>
+
+    <h2>Reporting a security or data concern</h2>
+    <p>If you think your information, or data we handle for a client, has been exposed or misused, or you've found a security problem, <a href="#contact" data-email>email us</a> with "Security" in the subject line. We'll confirm we've received it within 2 business days, look into it, and tell you what we found and what we did.</p>
+    <p>If an incident affects a client's account or Amazon data, we tell the client and, where required, Amazon within 24 hours of finding it.</p>
 
     <h2>How long we keep it</h2>
     <p>We keep your audit request and any emails we exchange on file, so we can refer back to them. We never use them for marketing. If you'd like us to delete your information, just ask and we will.</p>
@@ -104,6 +166,7 @@
 
 <footer class="doc-foot">
   <div class="wrap doc-wrap">
+    <p>CatalogFix is the trading name of CatalogFix Management Consultancy Services, Iloilo City, Philippines · DTI Business Name No. 7889874</p>
     <p>&copy; <span data-year>2026</span> CatalogFix · <a href="values.html">Our values</a> · <a href="index.html">Back to catalogfix.com</a></p>
   </div>
 </footer>

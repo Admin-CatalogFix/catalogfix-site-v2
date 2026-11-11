@@ -132,4 +132,19 @@ var CONFIG = {
     each('#site-nav a', function (a) { a.addEventListener('click', function () { setOpen(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setOpen(false); } });
   }
+
+  // Services dropdown: the arrow button opens it for touch and keyboard users (hover is CSS).
+  each('.nav-drop', function (drop) {
+    var btn = drop.querySelector('.nav-drop-btn');
+    var setDrop = function (open) {
+      drop.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', function () { setDrop(!drop.classList.contains('open')); });
+    drop.addEventListener('focusout', function (e) { if (!drop.contains(e.relatedTarget)) { setDrop(false); } });
+    document.addEventListener('click', function (e) { if (!drop.contains(e.target)) { setDrop(false); } });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { setDrop(false); btn.focus(); }
+    });
+  });
 }());

@@ -25,7 +25,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="/">Home</a>
-      <a href="/services">Services</a>
+      <div class="nav-drop">
+        <a href="/services">Services</a>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="svc-menu"><span class="sr-only">Show all services</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-menu" id="svc-menu">
+          <li><a href="/catalog-seo">Catalog &amp; SEO</a></li>
+          <li><a href="/design-content">Design &amp; content</a></li>
+          <li><a href="/advertising">Advertising</a></li>
+          <li><a href="/full-account-management">Full account management</a></li>
+        </ul>
+      </div>
+      <a href="/case-studies">Case studies</a>
       <a href="/who-we-are">Who We Are</a>
       <a href="/team">Our Team</a>
       <a class="btn" href="/#contact" data-audit>Get a free audit</a>
@@ -44,6 +54,7 @@
 
 <footer class="doc-foot">
   <div class="wrap doc-wrap">
+    <p>CatalogFix is the trading name of CatalogFix Management Consultancy Services, Iloilo City, Philippines · DTI Business Name No. 7889874</p>
     <p>&copy; <span data-year>2026</span> CatalogFix · <a href="/services">Services</a> · <a href="/#contact">Contact</a></p>
   </div>
 </footer>

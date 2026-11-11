@@ -23,6 +23,42 @@
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Our Values",
+      "description": "CatalogFix's mission, vision and core values: how we work with Amazon brands, and how we look after the specialists doing the work.",
+      "url": "https://catalogfix.com/values",
+      "isPartOf": {
+        "@id": "https://catalogfix.com/#website"
+      },
+      "publisher": {
+        "@id": "https://catalogfix.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://catalogfix.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Values",
+          "item": "https://catalogfix.com/values"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body class="doc-page">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -39,7 +75,17 @@
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-drop">
+        <a href="services.html">Services</a>
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="svc-menu"><span class="sr-only">Show all services</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-menu" id="svc-menu">
+          <li><a href="catalog-seo.html">Catalog &amp; SEO</a></li>
+          <li><a href="design-content.html">Design &amp; content</a></li>
+          <li><a href="advertising.html">Advertising</a></li>
+          <li><a href="full-account-management.html">Full account management</a></li>
+        </ul>
+      </div>
+      <a href="case-studies.html">Case studies</a>
       <a href="who-we-are.html">Who We Are</a>
       <a href="team.html">Our Team</a>
       <a class="btn" href="#contact" data-audit>Get a free audit</a>
@@ -129,6 +175,7 @@
 
 <footer class="doc-foot">
   <div class="wrap">
+    <p>CatalogFix is the trading name of CatalogFix Management Consultancy Services, Iloilo City, Philippines · DTI Business Name No. 7889874</p>
     <p>&copy; <span data-year>2026</span> CatalogFix · <a href="privacy.html">Privacy policy</a> · <a href="index.html">Back to catalogfix.com</a></p>
   </div>
 </footer>
