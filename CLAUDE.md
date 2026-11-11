@@ -94,7 +94,7 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 
 ## Services page (approved by Carl, 20 Oct 2026)
 
-`services.html` exists because Amazon's Solution Provider Portal (SPP) rejected Carl's application. The website must show a **detailed description of service offerings**, **core offerings, benefits and expertise**, and **success stories with credentials and client testimonials**.
+`services.html` exists because Amazon's Solution Provider Portal (SPP) rejected Carl's application (made while the old v1 site was live; v2 launched after). The website must show a **detailed description of service offerings**, **core offerings, benefits and expertise**, and **success stories with credentials and client testimonials**.
 - Every part of the service description Carl gave Amazon must stay on this page, so a reviewer can match the two: listings and catalog (creation, variations, error fixes), Amazon SEO (keyword research, listing optimization), PPC (Sponsored Products, Brands, Display), creatives (images, A+ Content, Brand Store), FBA reimbursement claims, account health, Seller Support cases, reporting.
 - Reports are **"regular"**, never "weekly" (Carl, 20 Oct 2026), here and everywhere else.
 - Seven rows: Catalog & SEO · Design & content · Advertising · Reimbursements · Account health & Seller Support · Brand Registry, ungating & Vine · Full account management (navy panel). Then "One fix, or ongoing support" (with the pricing line Carl approved) and the contact section.
