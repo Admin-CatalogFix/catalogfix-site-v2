@@ -981,3 +981,12 @@ h1, h2, h3 { color: var(--navy); font-weight: 700; line-height: 1.08; letter-spa
   border-right: 1.5px solid var(--orange);
   transform: rotate(45deg);
 }
+
+/* Amazon Ads partner strip (Advertising page). Logo rules: 152-688px wide, clear space, smaller than our logo */
+.sect--partner { padding: 56px 0; }
+.partner { display: flex; align-items: center; gap: 48px; }
+.partner-logo { flex: none; width: 152px; height: auto; margin: 16px; }
+.partner-txt h2 { font-size: 24px; margin-bottom: 8px; }
+.partner-txt p { max-width: 640px; }
+.partner-legal { margin-top: 12px; font-size: 13px; color: var(--muted); }
+@media (max-width: 700px) { .partner { flex-direction: column; align-items: flex-start; gap: 16px; } .partner-logo { margin: 8px 0; } }
