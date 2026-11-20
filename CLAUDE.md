@@ -94,15 +94,14 @@ Each client shows its **logo** above category · marketplaces · service (Carl, 
 
 ## Services page (approved by Carl, 20 Oct 2026)
 
-`services.html` exists because Amazon's Solution Provider Portal (SPP) rejected Carl's application (made while the old v1 site was live; v2 launched after). The website must show a **detailed description of service offerings**, **core offerings, benefits and expertise**, and **success stories with credentials and client testimonials**.
-- Every part of the service description Carl gave Amazon must stay on this page, so a reviewer can match the two: listings and catalog (creation, variations, error fixes), Amazon SEO (keyword research, listing optimization), PPC (Sponsored Products, Brands, Display), creatives (images, A+ Content, Brand Store), FBA reimbursement claims, account health, Seller Support cases, reporting.
+`services.html` gives a **detailed description of service offerings**, **core offerings, benefits and expertise**, and links to **success stories with credentials and client testimonials**.
+- Every part of Carl's official service description must stay on this page, so a reviewer can match the two: listings and catalog (creation, variations, error fixes), Amazon SEO (keyword research, listing optimization), PPC (Sponsored Products, Brands, Display), creatives (images, A+ Content, Brand Store), FBA reimbursement claims, account health, Seller Support cases, reporting.
 - Reports are **"regular"**, never "weekly" (Carl, 20 Oct 2026), here and everywhere else.
 - Seven rows: Catalog & SEO · Design & content · Advertising · Reimbursements · Account health & Seller Support · Brand Registry, ungating & Vine · Full account management (navy panel). Then "One fix, or ongoing support" (with the pricing line Carl approved) and the contact section.
 - The jump links (Catalog & SEO · Design & content · …) stay pinned under the menu while you scroll the services, on tablet and up (Carl, 21 Oct 2026). They sit in `.jump-bar` inside the services section (not in the page header) so they let go when the services end. `position: sticky`. The bar is Medium Navy with white links (Carl, 21 Oct 2026), like the comparison table's pinned header: on this site navy means "this part stays put". site.js measures the bar's height (`--jump-h`) so jump targets land below it when the links wrap to two lines, and marks the service you're reading (`aria-current`, white with an orange underline). Phones: same navy, but not pinned (four lines is too tall) and nothing highlighted.
 - Vine says "enrolling eligible products" only. Never "review strategy", since Amazon is strict about anything that sounds like influencing reviews.
 - Home and Who We Are keep the short "What we do" summary, linking here ("See every service in detail →").
 - Team page expertise: done (20 Oct 2026).
-- Still to do for SPP: **credentials**, since none are on the site yet. The relevant certifications have expired (Carl's Amazon Ads Advanced Retail, Jan 2025; Thea's Walmart Connect, Dec 2024), so don't list them. Add a credentials line per person once they renew or take free Amazon Ads / Walmart Connect certifications. **2–3 case studies** with real numbers and each client's OK. Then move catalogfix.com to this site before reapplying.
 
 ## Motion (approved by Carl, Oct 2026)
 
